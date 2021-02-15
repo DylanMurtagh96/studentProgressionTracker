@@ -16,5 +16,10 @@ namespace studentProgressionTracker
         {
             InitializeComponent();
         }
+
+        private void frmCourseInfo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
