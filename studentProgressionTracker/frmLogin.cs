@@ -19,10 +19,18 @@ namespace studentProgressionTracker
 
         private void btnSignin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmMenu menuForm = new frmMenu();
-            menuForm.Closed += (s, args) => this.Close();
-            menuForm.ShowDialog();
+            if (txtUsername.Text.Equals("Shauna Doyle") && txtPassword.Text.Equals("Password1"))
+            {
+                this.Hide();
+                frmMenu menuForm = new frmMenu();
+                menuForm.Closed += (s, args) => this.Close();
+                menuForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("ERROR: Please enter the correct user name and password", "Invalid Input", MessageBoxButtons.OK,
+                   MessageBoxIcon.Information);
+            }
             
         }
 

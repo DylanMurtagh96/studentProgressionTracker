@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\studentProgressionTracker"
+    "\\studentProgressionTracker",
+    "\\studentProgressionTracker\\bin",
+    "\\studentProgressionTracker\\bin\\Debug"
   ],
-  "SelectedNode": "\\studentProgressionTracker\\studentProgressionTracker.csproj",
+  "SelectedNode": "\\studentProgressionTracker\\bin\\Debug\\studentProgressionTracker.exe",
   "PreviewInSolutionExplorer": false
 }
