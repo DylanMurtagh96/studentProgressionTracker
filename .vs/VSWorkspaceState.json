@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\studentProgressionTracker"
   ],
+  "SelectedNode": "\\studentProgressionTracker\\studentProgressionTracker.csproj",
   "PreviewInSolutionExplorer": false
 }
