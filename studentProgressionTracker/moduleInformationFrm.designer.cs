@@ -70,7 +70,7 @@
             this.moduleIDTbx.Location = new System.Drawing.Point(281, 141);
             this.moduleIDTbx.Margin = new System.Windows.Forms.Padding(2);
             this.moduleIDTbx.Name = "moduleIDTbx";
-            this.moduleIDTbx.Size = new System.Drawing.Size(59, 21);
+            this.moduleIDTbx.Size = new System.Drawing.Size(59, 24);
             this.moduleIDTbx.TabIndex = 0;
             // 
             // courseIDTbx
@@ -78,7 +78,7 @@
             this.courseIDTbx.Location = new System.Drawing.Point(112, 141);
             this.courseIDTbx.Margin = new System.Windows.Forms.Padding(2);
             this.courseIDTbx.Name = "courseIDTbx";
-            this.courseIDTbx.Size = new System.Drawing.Size(59, 21);
+            this.courseIDTbx.Size = new System.Drawing.Size(59, 24);
             this.courseIDTbx.TabIndex = 1;
             // 
             // semesterTbx
@@ -86,7 +86,7 @@
             this.semesterTbx.Location = new System.Drawing.Point(164, 27);
             this.semesterTbx.Margin = new System.Windows.Forms.Padding(2);
             this.semesterTbx.Name = "semesterTbx";
-            this.semesterTbx.Size = new System.Drawing.Size(59, 21);
+            this.semesterTbx.Size = new System.Drawing.Size(59, 24);
             this.semesterTbx.TabIndex = 2;
             // 
             // weekBeginningTbx
@@ -94,7 +94,7 @@
             this.weekBeginningTbx.Location = new System.Drawing.Point(164, 56);
             this.weekBeginningTbx.Margin = new System.Windows.Forms.Padding(2);
             this.weekBeginningTbx.Name = "weekBeginningTbx";
-            this.weekBeginningTbx.Size = new System.Drawing.Size(59, 21);
+            this.weekBeginningTbx.Size = new System.Drawing.Size(59, 24);
             this.weekBeginningTbx.TabIndex = 3;
             // 
             // moduleTitleTbx
@@ -102,7 +102,7 @@
             this.moduleTitleTbx.Location = new System.Drawing.Point(112, 228);
             this.moduleTitleTbx.Margin = new System.Windows.Forms.Padding(2);
             this.moduleTitleTbx.Name = "moduleTitleTbx";
-            this.moduleTitleTbx.Size = new System.Drawing.Size(229, 21);
+            this.moduleTitleTbx.Size = new System.Drawing.Size(229, 24);
             this.moduleTitleTbx.TabIndex = 4;
             // 
             // NFQLvlTbx
@@ -110,7 +110,7 @@
             this.NFQLvlTbx.Location = new System.Drawing.Point(112, 169);
             this.NFQLvlTbx.Margin = new System.Windows.Forms.Padding(2);
             this.NFQLvlTbx.Name = "NFQLvlTbx";
-            this.NFQLvlTbx.Size = new System.Drawing.Size(59, 21);
+            this.NFQLvlTbx.Size = new System.Drawing.Size(59, 24);
             this.NFQLvlTbx.TabIndex = 5;
             // 
             // awardByTbx
@@ -118,7 +118,7 @@
             this.awardByTbx.Location = new System.Drawing.Point(112, 198);
             this.awardByTbx.Margin = new System.Windows.Forms.Padding(2);
             this.awardByTbx.Name = "awardByTbx";
-            this.awardByTbx.Size = new System.Drawing.Size(136, 21);
+            this.awardByTbx.Size = new System.Drawing.Size(136, 24);
             this.awardByTbx.TabIndex = 6;
             // 
             // durationTbx
@@ -126,12 +126,12 @@
             this.durationTbx.Location = new System.Drawing.Point(164, 88);
             this.durationTbx.Margin = new System.Windows.Forms.Padding(2);
             this.durationTbx.Name = "durationTbx";
-            this.durationTbx.Size = new System.Drawing.Size(59, 21);
+            this.durationTbx.Size = new System.Drawing.Size(59, 24);
             this.durationTbx.TabIndex = 7;
             // 
             // moduleOutlineTbx
             // 
-            this.moduleOutlineTbx.Location = new System.Drawing.Point(112, 264);
+            this.moduleOutlineTbx.Location = new System.Drawing.Point(122, 265);
             this.moduleOutlineTbx.Margin = new System.Windows.Forms.Padding(2);
             this.moduleOutlineTbx.Multiline = true;
             this.moduleOutlineTbx.Name = "moduleOutlineTbx";
@@ -144,7 +144,7 @@
             this.modleIDLbl.Location = new System.Drawing.Point(202, 144);
             this.modleIDLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.modleIDLbl.Name = "modleIDLbl";
-            this.modleIDLbl.Size = new System.Drawing.Size(65, 13);
+            this.modleIDLbl.Size = new System.Drawing.Size(78, 17);
             this.modleIDLbl.TabIndex = 9;
             this.modleIDLbl.Text = "Module ID";
             // 
@@ -154,7 +154,7 @@
             this.courseIDLbl.Location = new System.Drawing.Point(32, 144);
             this.courseIDLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.courseIDLbl.Name = "courseIDLbl";
-            this.courseIDLbl.Size = new System.Drawing.Size(66, 13);
+            this.courseIDLbl.Size = new System.Drawing.Size(79, 17);
             this.courseIDLbl.TabIndex = 10;
             this.courseIDLbl.Text = "Course ID";
             // 
@@ -164,7 +164,7 @@
             this.semesterIDLbl.Location = new System.Drawing.Point(14, 27);
             this.semesterIDLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.semesterIDLbl.Name = "semesterIDLbl";
-            this.semesterIDLbl.Size = new System.Drawing.Size(62, 13);
+            this.semesterIDLbl.Size = new System.Drawing.Size(75, 17);
             this.semesterIDLbl.TabIndex = 11;
             this.semesterIDLbl.Text = "Semester";
             // 
@@ -174,7 +174,7 @@
             this.weekBeginingLbl.Location = new System.Drawing.Point(14, 56);
             this.weekBeginingLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.weekBeginingLbl.Name = "weekBeginingLbl";
-            this.weekBeginingLbl.Size = new System.Drawing.Size(98, 13);
+            this.weekBeginingLbl.Size = new System.Drawing.Size(120, 17);
             this.weekBeginingLbl.TabIndex = 12;
             this.weekBeginingLbl.Text = "Week Beginning";
             // 
@@ -184,7 +184,7 @@
             this.durationLbl.Location = new System.Drawing.Point(14, 88);
             this.durationLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.durationLbl.Name = "durationLbl";
-            this.durationLbl.Size = new System.Drawing.Size(107, 13);
+            this.durationLbl.Size = new System.Drawing.Size(132, 17);
             this.durationLbl.TabIndex = 13;
             this.durationLbl.Text = "Duration (Weeks)";
             // 
@@ -194,7 +194,7 @@
             this.NFQLvlLbl.Location = new System.Drawing.Point(34, 172);
             this.NFQLvlLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NFQLvlLbl.Name = "NFQLvlLbl";
-            this.NFQLvlLbl.Size = new System.Drawing.Size(64, 13);
+            this.NFQLvlLbl.Size = new System.Drawing.Size(77, 17);
             this.NFQLvlLbl.TabIndex = 14;
             this.NFQLvlLbl.Text = "NFQ Level";
             // 
@@ -204,7 +204,7 @@
             this.awardByLbl.Location = new System.Drawing.Point(36, 201);
             this.awardByLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.awardByLbl.Name = "awardByLbl";
-            this.awardByLbl.Size = new System.Drawing.Size(62, 13);
+            this.awardByLbl.Size = new System.Drawing.Size(75, 17);
             this.awardByLbl.TabIndex = 15;
             this.awardByLbl.Text = "Award By";
             // 
@@ -214,7 +214,7 @@
             this.courseTitleLbl.Location = new System.Drawing.Point(22, 231);
             this.courseTitleLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.courseTitleLbl.Name = "courseTitleLbl";
-            this.courseTitleLbl.Size = new System.Drawing.Size(76, 13);
+            this.courseTitleLbl.Size = new System.Drawing.Size(92, 17);
             this.courseTitleLbl.TabIndex = 16;
             this.courseTitleLbl.Text = "Course Title";
             this.courseTitleLbl.Click += new System.EventHandler(this.courseTitleLbl_Click);
@@ -225,7 +225,7 @@
             this.moduleOutlineLbl.Location = new System.Drawing.Point(7, 265);
             this.moduleOutlineLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.moduleOutlineLbl.Name = "moduleOutlineLbl";
-            this.moduleOutlineLbl.Size = new System.Drawing.Size(91, 13);
+            this.moduleOutlineLbl.Size = new System.Drawing.Size(111, 17);
             this.moduleOutlineLbl.TabIndex = 17;
             this.moduleOutlineLbl.Text = "Module Outline";
             // 
@@ -241,7 +241,7 @@
             this.scheduleItemsGbx.Margin = new System.Windows.Forms.Padding(2);
             this.scheduleItemsGbx.Name = "scheduleItemsGbx";
             this.scheduleItemsGbx.Padding = new System.Windows.Forms.Padding(2);
-            this.scheduleItemsGbx.Size = new System.Drawing.Size(243, 116);
+            this.scheduleItemsGbx.Size = new System.Drawing.Size(253, 116);
             this.scheduleItemsGbx.TabIndex = 18;
             this.scheduleItemsGbx.TabStop = false;
             this.scheduleItemsGbx.Text = "Schedule (plan)";
@@ -251,7 +251,7 @@
             this.recordTrackerTbx.Location = new System.Drawing.Point(261, 469);
             this.recordTrackerTbx.Margin = new System.Windows.Forms.Padding(2);
             this.recordTrackerTbx.Name = "recordTrackerTbx";
-            this.recordTrackerTbx.Size = new System.Drawing.Size(70, 21);
+            this.recordTrackerTbx.Size = new System.Drawing.Size(70, 24);
             this.recordTrackerTbx.TabIndex = 19;
             // 
             // firstBtn
@@ -383,14 +383,15 @@
             this.lblWelcome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblWelcome.Location = new System.Drawing.Point(275, 50);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(280, 32);
+            this.lblWelcome.Size = new System.Drawing.Size(354, 41);
             this.lblWelcome.TabIndex = 31;
             this.lblWelcome.Text = "Module Information";
             // 
             // moduleInformationFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::studentProgressionTracker.Properties.Resources.image;
             this.ClientSize = new System.Drawing.Size(749, 524);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.picboxHome);

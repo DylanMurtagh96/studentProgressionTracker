@@ -203,7 +203,11 @@ namespace studentProgressionTracker
                 moduleAdapter.Dispose();
                 moduleTable.Dispose();
             }
-            Close();
+            this.Close();
+            this.Hide();
+            frmMenu menuForm = new frmMenu();
+            menuForm.Closed += (s, args) => this.Close();
+            menuForm.ShowDialog();
         }
 
         private void courseTitleLbl_Click(object sender, EventArgs e)
