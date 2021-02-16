@@ -35,5 +35,13 @@ namespace studentProgressionTracker
             moduleForm.ShowDialog();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmCourseInfo courseForm = new frmCourseInfo();
+            courseForm.Closed += (s, args) => this.Close();
+            courseForm.ShowDialog();
+        }
     }
 }
