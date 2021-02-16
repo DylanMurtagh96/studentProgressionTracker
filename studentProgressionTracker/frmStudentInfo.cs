@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace studentProgressionTracker
 {
-    public partial class frmCourseInfo : Form
+    public partial class frmStudentInfo : Form
     {
-        public frmCourseInfo()
+        public frmStudentInfo()
         {
             InitializeComponent();
-        }
-
-        private void frmCourseInfo_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void picboxHome_Click(object sender, EventArgs e)

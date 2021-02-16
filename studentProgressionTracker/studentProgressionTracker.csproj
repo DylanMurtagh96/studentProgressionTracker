@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAssingmentRecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAssingmentRecs.Designer.cs">
+      <DependentUpon>frmAssingmentRecs.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCourseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStudentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentInfo.Designer.cs">
+      <DependentUpon>frmStudentInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="moduleInformationFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentInfo.resx">
+      <DependentUpon>frmStudentInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="moduleInformationFrm.resx">
       <DependentUpon>moduleInformationFrm.cs</DependentUpon>

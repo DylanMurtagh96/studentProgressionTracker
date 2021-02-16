@@ -73,6 +73,7 @@ namespace studentProgressionTracker
             this.btnStudent.TabIndex = 5;
             this.btnStudent.Text = "Student Information";
             this.btnStudent.UseVisualStyleBackColor = true;
+            this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
             // 
             // btnAssingment
             // 
@@ -84,6 +85,7 @@ namespace studentProgressionTracker
             this.btnAssingment.TabIndex = 6;
             this.btnAssingment.Text = "Assignment Records";
             this.btnAssingment.UseVisualStyleBackColor = true;
+            this.btnAssingment.Click += new System.EventHandler(this.btnAssingment_Click);
             // 
             // btnLogout
             // 

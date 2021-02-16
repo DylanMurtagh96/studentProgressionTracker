@@ -31,7 +31,7 @@ namespace studentProgressionTracker
         private void moduleInformationFrm_Load(object sender, EventArgs e)
         {
             var connString = @"Provider = Microsoft.ACE.OLEDB.12.0;" +
-                            @"Data Source = C:\Users\kinca\OneDrive\Software Dev. Course\Team Project\courseModuleDB.accdb;";
+                            @"Data Source = ..\..\..\courseModuleDB.accdb;";
             //+ @" Jet OLEDB:Database Password = killester";
 
             conn = new OleDbConnection(connString);
@@ -204,6 +204,19 @@ namespace studentProgressionTracker
                 moduleTable.Dispose();
             }
             Close();
+        }
+
+        private void courseTitleLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picboxHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMenu menuForm = new frmMenu();
+            menuForm.Closed += (s, args) => this.Close();
+            menuForm.ShowDialog();
         }
     }
 
