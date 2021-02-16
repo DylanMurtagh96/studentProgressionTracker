@@ -81,8 +81,10 @@ namespace studentProgressionTracker
             // 
             this.txtPassword.Location = new System.Drawing.Point(154, 126);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(178, 21);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.Text = "Password1";
             // 
             // txtUsername
             // 
@@ -90,6 +92,7 @@ namespace studentProgressionTracker
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(178, 21);
             this.txtUsername.TabIndex = 2;
+            this.txtUsername.Text = "Shauna Doyle";
             // 
             // lblPassword
             // 

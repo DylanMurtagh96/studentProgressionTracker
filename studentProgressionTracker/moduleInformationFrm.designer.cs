@@ -64,146 +64,164 @@
             // 
             // moduleIDTbx
             // 
-            this.moduleIDTbx.Location = new System.Drawing.Point(143, 62);
+            this.moduleIDTbx.Location = new System.Drawing.Point(125, 50);
+            this.moduleIDTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.moduleIDTbx.Name = "moduleIDTbx";
-            this.moduleIDTbx.Size = new System.Drawing.Size(67, 22);
+            this.moduleIDTbx.Size = new System.Drawing.Size(59, 21);
             this.moduleIDTbx.TabIndex = 0;
             // 
             // courseIDTbx
             // 
-            this.courseIDTbx.Location = new System.Drawing.Point(143, 91);
+            this.courseIDTbx.Location = new System.Drawing.Point(125, 74);
+            this.courseIDTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.courseIDTbx.Name = "courseIDTbx";
-            this.courseIDTbx.Size = new System.Drawing.Size(67, 22);
+            this.courseIDTbx.Size = new System.Drawing.Size(59, 21);
             this.courseIDTbx.TabIndex = 1;
             // 
             // semesterTbx
             // 
-            this.semesterTbx.Location = new System.Drawing.Point(188, 33);
+            this.semesterTbx.Location = new System.Drawing.Point(164, 27);
+            this.semesterTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.semesterTbx.Name = "semesterTbx";
-            this.semesterTbx.Size = new System.Drawing.Size(67, 22);
+            this.semesterTbx.Size = new System.Drawing.Size(59, 21);
             this.semesterTbx.TabIndex = 2;
             // 
             // weekBeginningTbx
             // 
-            this.weekBeginningTbx.Location = new System.Drawing.Point(188, 69);
+            this.weekBeginningTbx.Location = new System.Drawing.Point(164, 56);
+            this.weekBeginningTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.weekBeginningTbx.Name = "weekBeginningTbx";
-            this.weekBeginningTbx.Size = new System.Drawing.Size(67, 22);
+            this.weekBeginningTbx.Size = new System.Drawing.Size(59, 21);
             this.weekBeginningTbx.TabIndex = 3;
             // 
             // moduleTitleTbx
             // 
-            this.moduleTitleTbx.Location = new System.Drawing.Point(130, 227);
+            this.moduleTitleTbx.Location = new System.Drawing.Point(114, 184);
+            this.moduleTitleTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.moduleTitleTbx.Name = "moduleTitleTbx";
-            this.moduleTitleTbx.Size = new System.Drawing.Size(545, 22);
+            this.moduleTitleTbx.Size = new System.Drawing.Size(478, 21);
             this.moduleTitleTbx.TabIndex = 4;
             // 
             // NFQLvlTbx
             // 
-            this.NFQLvlTbx.Location = new System.Drawing.Point(143, 130);
+            this.NFQLvlTbx.Location = new System.Drawing.Point(125, 106);
+            this.NFQLvlTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NFQLvlTbx.Name = "NFQLvlTbx";
-            this.NFQLvlTbx.Size = new System.Drawing.Size(67, 22);
+            this.NFQLvlTbx.Size = new System.Drawing.Size(59, 21);
             this.NFQLvlTbx.TabIndex = 5;
             // 
             // awardByTbx
             // 
-            this.awardByTbx.Location = new System.Drawing.Point(143, 167);
+            this.awardByTbx.Location = new System.Drawing.Point(125, 136);
+            this.awardByTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.awardByTbx.Name = "awardByTbx";
-            this.awardByTbx.Size = new System.Drawing.Size(155, 22);
+            this.awardByTbx.Size = new System.Drawing.Size(136, 21);
             this.awardByTbx.TabIndex = 6;
             // 
             // durationTbx
             // 
-            this.durationTbx.Location = new System.Drawing.Point(188, 108);
+            this.durationTbx.Location = new System.Drawing.Point(164, 88);
+            this.durationTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.durationTbx.Name = "durationTbx";
-            this.durationTbx.Size = new System.Drawing.Size(67, 22);
+            this.durationTbx.Size = new System.Drawing.Size(59, 21);
             this.durationTbx.TabIndex = 7;
             // 
             // moduleOutlineTbx
             // 
-            this.moduleOutlineTbx.Location = new System.Drawing.Point(130, 283);
+            this.moduleOutlineTbx.Location = new System.Drawing.Point(114, 230);
+            this.moduleOutlineTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.moduleOutlineTbx.Multiline = true;
             this.moduleOutlineTbx.Name = "moduleOutlineTbx";
-            this.moduleOutlineTbx.Size = new System.Drawing.Size(545, 209);
+            this.moduleOutlineTbx.Size = new System.Drawing.Size(478, 171);
             this.moduleOutlineTbx.TabIndex = 8;
             // 
             // modleIDLbl
             // 
             this.modleIDLbl.AutoSize = true;
-            this.modleIDLbl.Location = new System.Drawing.Point(48, 62);
+            this.modleIDLbl.Location = new System.Drawing.Point(42, 50);
+            this.modleIDLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.modleIDLbl.Name = "modleIDLbl";
-            this.modleIDLbl.Size = new System.Drawing.Size(71, 17);
+            this.modleIDLbl.Size = new System.Drawing.Size(65, 13);
             this.modleIDLbl.TabIndex = 9;
             this.modleIDLbl.Text = "Module ID";
             // 
             // courseIDLbl
             // 
             this.courseIDLbl.AutoSize = true;
-            this.courseIDLbl.Location = new System.Drawing.Point(49, 94);
+            this.courseIDLbl.Location = new System.Drawing.Point(43, 76);
+            this.courseIDLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.courseIDLbl.Name = "courseIDLbl";
-            this.courseIDLbl.Size = new System.Drawing.Size(70, 17);
+            this.courseIDLbl.Size = new System.Drawing.Size(66, 13);
             this.courseIDLbl.TabIndex = 10;
             this.courseIDLbl.Text = "Course ID";
             // 
             // semesterIDLbl
             // 
             this.semesterIDLbl.AutoSize = true;
-            this.semesterIDLbl.Location = new System.Drawing.Point(63, 33);
+            this.semesterIDLbl.Location = new System.Drawing.Point(14, 27);
+            this.semesterIDLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.semesterIDLbl.Name = "semesterIDLbl";
-            this.semesterIDLbl.Size = new System.Drawing.Size(68, 17);
+            this.semesterIDLbl.Size = new System.Drawing.Size(62, 13);
             this.semesterIDLbl.TabIndex = 11;
             this.semesterIDLbl.Text = "Semester";
             // 
             // weekBeginingLbl
             // 
             this.weekBeginingLbl.AutoSize = true;
-            this.weekBeginingLbl.Location = new System.Drawing.Point(63, 69);
+            this.weekBeginingLbl.Location = new System.Drawing.Point(14, 56);
+            this.weekBeginingLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.weekBeginingLbl.Name = "weekBeginingLbl";
-            this.weekBeginingLbl.Size = new System.Drawing.Size(111, 17);
+            this.weekBeginingLbl.Size = new System.Drawing.Size(98, 13);
             this.weekBeginingLbl.TabIndex = 12;
             this.weekBeginingLbl.Text = "Week Beginning";
             // 
             // durationLbl
             // 
             this.durationLbl.AutoSize = true;
-            this.durationLbl.Location = new System.Drawing.Point(63, 108);
+            this.durationLbl.Location = new System.Drawing.Point(14, 88);
+            this.durationLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.durationLbl.Name = "durationLbl";
-            this.durationLbl.Size = new System.Drawing.Size(119, 17);
+            this.durationLbl.Size = new System.Drawing.Size(107, 13);
             this.durationLbl.TabIndex = 13;
             this.durationLbl.Text = "Duration (Weeks)";
             // 
             // NFQLvlLbl
             // 
             this.NFQLvlLbl.AutoSize = true;
-            this.NFQLvlLbl.Location = new System.Drawing.Point(48, 133);
+            this.NFQLvlLbl.Location = new System.Drawing.Point(42, 108);
+            this.NFQLvlLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NFQLvlLbl.Name = "NFQLvlLbl";
-            this.NFQLvlLbl.Size = new System.Drawing.Size(75, 17);
+            this.NFQLvlLbl.Size = new System.Drawing.Size(64, 13);
             this.NFQLvlLbl.TabIndex = 14;
             this.NFQLvlLbl.Text = "NFQ Level";
             // 
             // awardByLbl
             // 
             this.awardByLbl.AutoSize = true;
-            this.awardByLbl.Location = new System.Drawing.Point(52, 167);
+            this.awardByLbl.Location = new System.Drawing.Point(45, 136);
+            this.awardByLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.awardByLbl.Name = "awardByLbl";
-            this.awardByLbl.Size = new System.Drawing.Size(67, 17);
+            this.awardByLbl.Size = new System.Drawing.Size(62, 13);
             this.awardByLbl.TabIndex = 15;
             this.awardByLbl.Text = "Award By";
             // 
             // courseTitleLbl
             // 
             this.courseTitleLbl.AutoSize = true;
-            this.courseTitleLbl.Location = new System.Drawing.Point(39, 232);
+            this.courseTitleLbl.Location = new System.Drawing.Point(34, 188);
+            this.courseTitleLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.courseTitleLbl.Name = "courseTitleLbl";
-            this.courseTitleLbl.Size = new System.Drawing.Size(84, 17);
+            this.courseTitleLbl.Size = new System.Drawing.Size(76, 13);
             this.courseTitleLbl.TabIndex = 16;
             this.courseTitleLbl.Text = "Course Title";
             // 
             // moduleOutlineLbl
             // 
             this.moduleOutlineLbl.AutoSize = true;
-            this.moduleOutlineLbl.Location = new System.Drawing.Point(25, 283);
+            this.moduleOutlineLbl.Location = new System.Drawing.Point(22, 230);
+            this.moduleOutlineLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.moduleOutlineLbl.Name = "moduleOutlineLbl";
-            this.moduleOutlineLbl.Size = new System.Drawing.Size(103, 17);
+            this.moduleOutlineLbl.Size = new System.Drawing.Size(91, 13);
             this.moduleOutlineLbl.TabIndex = 17;
             this.moduleOutlineLbl.Text = "Module Outline";
             // 
@@ -215,25 +233,29 @@
             this.scheduleItemsGbx.Controls.Add(this.weekBeginningTbx);
             this.scheduleItemsGbx.Controls.Add(this.durationTbx);
             this.scheduleItemsGbx.Controls.Add(this.durationLbl);
-            this.scheduleItemsGbx.Location = new System.Drawing.Point(396, 41);
+            this.scheduleItemsGbx.Location = new System.Drawing.Point(346, 33);
+            this.scheduleItemsGbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.scheduleItemsGbx.Name = "scheduleItemsGbx";
-            this.scheduleItemsGbx.Size = new System.Drawing.Size(278, 143);
+            this.scheduleItemsGbx.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.scheduleItemsGbx.Size = new System.Drawing.Size(243, 116);
             this.scheduleItemsGbx.TabIndex = 18;
             this.scheduleItemsGbx.TabStop = false;
             this.scheduleItemsGbx.Text = "Schedule (plan)";
             // 
             // recordTrackerTbx
             // 
-            this.recordTrackerTbx.Location = new System.Drawing.Point(312, 534);
+            this.recordTrackerTbx.Location = new System.Drawing.Point(273, 434);
+            this.recordTrackerTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.recordTrackerTbx.Name = "recordTrackerTbx";
-            this.recordTrackerTbx.Size = new System.Drawing.Size(80, 22);
+            this.recordTrackerTbx.Size = new System.Drawing.Size(70, 21);
             this.recordTrackerTbx.TabIndex = 19;
             // 
             // firstBtn
             // 
-            this.firstBtn.Location = new System.Drawing.Point(32, 522);
+            this.firstBtn.Location = new System.Drawing.Point(28, 424);
+            this.firstBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.firstBtn.Name = "firstBtn";
-            this.firstBtn.Size = new System.Drawing.Size(124, 45);
+            this.firstBtn.Size = new System.Drawing.Size(108, 37);
             this.firstBtn.TabIndex = 20;
             this.firstBtn.Text = "&First";
             this.firstBtn.UseVisualStyleBackColor = true;
@@ -241,9 +263,10 @@
             // 
             // nextBtn
             // 
-            this.nextBtn.Location = new System.Drawing.Point(403, 522);
+            this.nextBtn.Location = new System.Drawing.Point(352, 424);
+            this.nextBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nextBtn.Name = "nextBtn";
-            this.nextBtn.Size = new System.Drawing.Size(124, 45);
+            this.nextBtn.Size = new System.Drawing.Size(108, 37);
             this.nextBtn.TabIndex = 21;
             this.nextBtn.Text = "&Next";
             this.nextBtn.UseVisualStyleBackColor = true;
@@ -251,9 +274,10 @@
             // 
             // previousBtn
             // 
-            this.previousBtn.Location = new System.Drawing.Point(174, 523);
+            this.previousBtn.Location = new System.Drawing.Point(152, 425);
+            this.previousBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.previousBtn.Name = "previousBtn";
-            this.previousBtn.Size = new System.Drawing.Size(124, 45);
+            this.previousBtn.Size = new System.Drawing.Size(108, 37);
             this.previousBtn.TabIndex = 22;
             this.previousBtn.Text = "&Previous";
             this.previousBtn.UseVisualStyleBackColor = true;
@@ -261,9 +285,10 @@
             // 
             // lastBtn
             // 
-            this.lastBtn.Location = new System.Drawing.Point(551, 523);
+            this.lastBtn.Location = new System.Drawing.Point(482, 425);
+            this.lastBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lastBtn.Name = "lastBtn";
-            this.lastBtn.Size = new System.Drawing.Size(124, 45);
+            this.lastBtn.Size = new System.Drawing.Size(108, 37);
             this.lastBtn.TabIndex = 23;
             this.lastBtn.Text = "&Last";
             this.lastBtn.UseVisualStyleBackColor = true;
@@ -271,9 +296,10 @@
             // 
             // updateBtn
             // 
-            this.updateBtn.Location = new System.Drawing.Point(710, 51);
+            this.updateBtn.Location = new System.Drawing.Point(621, 41);
+            this.updateBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(124, 45);
+            this.updateBtn.Size = new System.Drawing.Size(108, 37);
             this.updateBtn.TabIndex = 24;
             this.updateBtn.Text = "&Update/Save";
             this.updateBtn.UseVisualStyleBackColor = true;
@@ -281,9 +307,10 @@
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(710, 126);
+            this.addBtn.Location = new System.Drawing.Point(621, 102);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(124, 45);
+            this.addBtn.Size = new System.Drawing.Size(108, 37);
             this.addBtn.TabIndex = 25;
             this.addBtn.Text = "&Add";
             this.addBtn.UseVisualStyleBackColor = true;
@@ -291,9 +318,10 @@
             // 
             // deleteBtn
             // 
-            this.deleteBtn.Location = new System.Drawing.Point(710, 204);
+            this.deleteBtn.Location = new System.Drawing.Point(621, 166);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(124, 45);
+            this.deleteBtn.Size = new System.Drawing.Size(108, 37);
             this.deleteBtn.TabIndex = 26;
             this.deleteBtn.Text = "&Delete";
             this.deleteBtn.UseVisualStyleBackColor = true;
@@ -301,18 +329,20 @@
             // 
             // searchBtn
             // 
-            this.searchBtn.Location = new System.Drawing.Point(710, 283);
+            this.searchBtn.Location = new System.Drawing.Point(621, 230);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(124, 45);
+            this.searchBtn.Size = new System.Drawing.Size(108, 37);
             this.searchBtn.TabIndex = 27;
             this.searchBtn.Text = "&Search";
             this.searchBtn.UseVisualStyleBackColor = true;
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(710, 363);
+            this.cancelBtn.Location = new System.Drawing.Point(621, 295);
+            this.cancelBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(124, 45);
+            this.cancelBtn.Size = new System.Drawing.Size(108, 37);
             this.cancelBtn.TabIndex = 28;
             this.cancelBtn.Text = "&Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
@@ -320,9 +350,10 @@
             // 
             // exitBtn
             // 
-            this.exitBtn.Location = new System.Drawing.Point(710, 447);
+            this.exitBtn.Location = new System.Drawing.Point(621, 363);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(124, 45);
+            this.exitBtn.Size = new System.Drawing.Size(108, 37);
             this.exitBtn.TabIndex = 29;
             this.exitBtn.Text = "E&xit";
             this.exitBtn.UseVisualStyleBackColor = true;
@@ -330,9 +361,9 @@
             // 
             // moduleInformationFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 607);
+            this.ClientSize = new System.Drawing.Size(749, 493);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.searchBtn);
@@ -357,6 +388,9 @@
             this.Controls.Add(this.moduleTitleTbx);
             this.Controls.Add(this.courseIDTbx);
             this.Controls.Add(this.moduleIDTbx);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "moduleInformationFrm";
             this.Text = "Module Information";
             this.Load += new System.EventHandler(this.moduleInformationFrm_Load);

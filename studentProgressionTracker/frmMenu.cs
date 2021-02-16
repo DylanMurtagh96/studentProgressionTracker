@@ -30,10 +30,9 @@ namespace studentProgressionTracker
         private void btnCourse_Click(object sender, EventArgs e)
         {
             this.Hide();
-            moduleInformationFrm courseForm = new moduleInformationFrm();
-            //frmCourseInfo courseForm = new frmCourseInfo();
-            courseForm.Closed += (s, args) => this.Close();
-            courseForm.ShowDialog();
+            moduleInformationFrm moduleForm = new moduleInformationFrm();
+            moduleForm.Closed += (s, args) => this.Close();
+            moduleForm.ShowDialog();
 
         }
     }
