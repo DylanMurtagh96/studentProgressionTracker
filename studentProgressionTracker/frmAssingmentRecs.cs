@@ -125,5 +125,93 @@ namespace studentProgressionTracker
                 MessageBox.Show("You are already at the last record", "Last Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                taskManager.EndCurrentEdit();
+                //create and use a command builder to generate the sql statement needed by the data adapter to update the database
+                taskCommBuilder = new OleDbCommandBuilder(taskAdapter);
+                //the data adapter update method updates values in the database
+                taskAdapter.Update(taskTable);
+                recordCount();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error saving new record", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                taskManager.AddNew();
+                MessageBox.Show("Populate the text boxes and Click the Save button when you have finished entering the data",
+                      "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //user will get new blank slot to populate and then can save new record by pressing save
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error adding new record", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult response;
+            //the yes and no buttons return a dialog response
+            response = MessageBox.Show("Are you sure you wish to delete this record", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            //if no is clicked do nothing i.e. dont delete
+            if (response == DialogResult.No)
+            {
+                return;
+            }
+            try
+            {
+                taskManager.RemoveAt(taskManager.Position);
+                taskCommBuilder = new OleDbCommandBuilder(taskAdapter);
+                taskAdapter.Update(taskTable);
+                MessageBox.Show("Record has been deleted", "Delete record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                recordCount();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error deleting record", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            taskManager.CancelCurrentEdit();
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            if (!dbError)
+            {
+                conn.Close();
+                conn.Dispose();
+                taskCommand.Dispose();
+                taskAdapter.Dispose();
+                taskTable.Dispose();
+            }
+            this.Close();
+            this.Hide();
+            frmMenu menuForm = new frmMenu();
+            menuForm.Closed += (s, args) => this.Close();
+            menuForm.ShowDialog();
+        }
     }
 }
