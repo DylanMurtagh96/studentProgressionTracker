@@ -252,5 +252,9 @@ namespace studentProgressionTracker
             menuForm.ShowDialog();
         }
 
+        private void picboxHome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

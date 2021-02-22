@@ -61,26 +61,26 @@ namespace studentProgressionTracker
             // 
             // taskIDTbx
             // 
-            this.taskIDTbx.Location = new System.Drawing.Point(94, 26);
-            this.taskIDTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.taskIDTbx.Location = new System.Drawing.Point(125, 32);
+            this.taskIDTbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.taskIDTbx.Name = "taskIDTbx";
-            this.taskIDTbx.Size = new System.Drawing.Size(133, 20);
+            this.taskIDTbx.Size = new System.Drawing.Size(176, 22);
             this.taskIDTbx.TabIndex = 0;
             // 
             // courseIDTbx
             // 
-            this.courseIDTbx.Location = new System.Drawing.Point(152, 60);
-            this.courseIDTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.courseIDTbx.Location = new System.Drawing.Point(203, 74);
+            this.courseIDTbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.courseIDTbx.Name = "courseIDTbx";
-            this.courseIDTbx.Size = new System.Drawing.Size(76, 20);
+            this.courseIDTbx.Size = new System.Drawing.Size(100, 22);
             this.courseIDTbx.TabIndex = 1;
             // 
             // moduleIDTbx
             // 
-            this.moduleIDTbx.Location = new System.Drawing.Point(152, 93);
-            this.moduleIDTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.moduleIDTbx.Location = new System.Drawing.Point(203, 114);
+            this.moduleIDTbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.moduleIDTbx.Name = "moduleIDTbx";
-            this.moduleIDTbx.Size = new System.Drawing.Size(76, 20);
+            this.moduleIDTbx.Size = new System.Drawing.Size(100, 22);
             this.moduleIDTbx.TabIndex = 2;
             // 
             // assignmentsGbx
@@ -91,114 +91,108 @@ namespace studentProgressionTracker
             this.assignmentsGbx.Controls.Add(this.taskIDTbx);
             this.assignmentsGbx.Controls.Add(this.moduleIDTbx);
             this.assignmentsGbx.Controls.Add(this.courseIDTbx);
-            this.assignmentsGbx.Location = new System.Drawing.Point(50, 106);
-            this.assignmentsGbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.assignmentsGbx.Location = new System.Drawing.Point(67, 130);
+            this.assignmentsGbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.assignmentsGbx.Name = "assignmentsGbx";
-            this.assignmentsGbx.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.assignmentsGbx.Size = new System.Drawing.Size(247, 132);
+            this.assignmentsGbx.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.assignmentsGbx.Size = new System.Drawing.Size(329, 162);
             this.assignmentsGbx.TabIndex = 3;
             this.assignmentsGbx.TabStop = false;
             // 
             // moduleIDLbl
             // 
             this.moduleIDLbl.AutoSize = true;
-            this.moduleIDLbl.Location = new System.Drawing.Point(22, 97);
-            this.moduleIDLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.moduleIDLbl.Location = new System.Drawing.Point(29, 119);
             this.moduleIDLbl.Name = "moduleIDLbl";
-            this.moduleIDLbl.Size = new System.Drawing.Size(56, 13);
+            this.moduleIDLbl.Size = new System.Drawing.Size(71, 17);
             this.moduleIDLbl.TabIndex = 5;
             this.moduleIDLbl.Text = "Module ID";
             // 
             // courseIDLbl
             // 
             this.courseIDLbl.AutoSize = true;
-            this.courseIDLbl.Location = new System.Drawing.Point(22, 64);
-            this.courseIDLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.courseIDLbl.Location = new System.Drawing.Point(29, 79);
             this.courseIDLbl.Name = "courseIDLbl";
-            this.courseIDLbl.Size = new System.Drawing.Size(54, 13);
+            this.courseIDLbl.Size = new System.Drawing.Size(70, 17);
             this.courseIDLbl.TabIndex = 4;
             this.courseIDLbl.Text = "Course ID";
             // 
             // taskIDLbl
             // 
             this.taskIDLbl.AutoSize = true;
-            this.taskIDLbl.Location = new System.Drawing.Point(22, 27);
-            this.taskIDLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.taskIDLbl.Location = new System.Drawing.Point(29, 33);
             this.taskIDLbl.Name = "taskIDLbl";
-            this.taskIDLbl.Size = new System.Drawing.Size(45, 13);
+            this.taskIDLbl.Size = new System.Drawing.Size(56, 17);
             this.taskIDLbl.TabIndex = 3;
             this.taskIDLbl.Text = "Task ID";
             // 
             // taskValueTbx
             // 
-            this.taskValueTbx.Location = new System.Drawing.Point(421, 171);
-            this.taskValueTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.taskValueTbx.Location = new System.Drawing.Point(561, 210);
+            this.taskValueTbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.taskValueTbx.Name = "taskValueTbx";
-            this.taskValueTbx.Size = new System.Drawing.Size(76, 20);
+            this.taskValueTbx.Size = new System.Drawing.Size(100, 22);
             this.taskValueTbx.TabIndex = 4;
             // 
             // taskNameTbx
             // 
-            this.taskNameTbx.Location = new System.Drawing.Point(421, 132);
-            this.taskNameTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.taskNameTbx.Location = new System.Drawing.Point(561, 162);
+            this.taskNameTbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.taskNameTbx.Name = "taskNameTbx";
-            this.taskNameTbx.Size = new System.Drawing.Size(76, 20);
+            this.taskNameTbx.Size = new System.Drawing.Size(100, 22);
             this.taskNameTbx.TabIndex = 5;
             // 
             // taskOutlineTbx
             // 
-            this.taskOutlineTbx.Location = new System.Drawing.Point(50, 281);
-            this.taskOutlineTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.taskOutlineTbx.Location = new System.Drawing.Point(67, 346);
+            this.taskOutlineTbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.taskOutlineTbx.Multiline = true;
             this.taskOutlineTbx.Name = "taskOutlineTbx";
             this.taskOutlineTbx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.taskOutlineTbx.Size = new System.Drawing.Size(457, 140);
+            this.taskOutlineTbx.Size = new System.Drawing.Size(608, 171);
             this.taskOutlineTbx.TabIndex = 6;
             // 
             // taskNameLbl
             // 
             this.taskNameLbl.AutoSize = true;
-            this.taskNameLbl.Location = new System.Drawing.Point(330, 135);
-            this.taskNameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.taskNameLbl.Location = new System.Drawing.Point(440, 166);
             this.taskNameLbl.Name = "taskNameLbl";
-            this.taskNameLbl.Size = new System.Drawing.Size(62, 13);
+            this.taskNameLbl.Size = new System.Drawing.Size(80, 17);
             this.taskNameLbl.TabIndex = 7;
             this.taskNameLbl.Text = "Task Name";
             // 
             // taskValueLbl
             // 
             this.taskValueLbl.AutoSize = true;
-            this.taskValueLbl.Location = new System.Drawing.Point(331, 171);
-            this.taskValueLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.taskValueLbl.Location = new System.Drawing.Point(441, 210);
             this.taskValueLbl.Name = "taskValueLbl";
-            this.taskValueLbl.Size = new System.Drawing.Size(61, 13);
+            this.taskValueLbl.Size = new System.Drawing.Size(79, 17);
             this.taskValueLbl.TabIndex = 8;
             this.taskValueLbl.Text = "Task Value";
             // 
             // taskOutlineLbl
             // 
             this.taskOutlineLbl.AutoSize = true;
-            this.taskOutlineLbl.Location = new System.Drawing.Point(58, 256);
-            this.taskOutlineLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.taskOutlineLbl.Location = new System.Drawing.Point(77, 315);
             this.taskOutlineLbl.Name = "taskOutlineLbl";
-            this.taskOutlineLbl.Size = new System.Drawing.Size(67, 13);
+            this.taskOutlineLbl.Size = new System.Drawing.Size(88, 17);
             this.taskOutlineLbl.TabIndex = 9;
             this.taskOutlineLbl.Text = "Task Outline";
             // 
             // recordTrackerTbx
             // 
-            this.recordTrackerTbx.Location = new System.Drawing.Point(242, 440);
-            this.recordTrackerTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.recordTrackerTbx.Location = new System.Drawing.Point(323, 542);
+            this.recordTrackerTbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.recordTrackerTbx.Name = "recordTrackerTbx";
-            this.recordTrackerTbx.Size = new System.Drawing.Size(74, 20);
+            this.recordTrackerTbx.Size = new System.Drawing.Size(97, 22);
             this.recordTrackerTbx.TabIndex = 10;
             // 
             // firstBtn
             // 
-            this.firstBtn.Location = new System.Drawing.Point(52, 432);
-            this.firstBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.firstBtn.Location = new System.Drawing.Point(69, 532);
+            this.firstBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.firstBtn.Name = "firstBtn";
-            this.firstBtn.Size = new System.Drawing.Size(79, 32);
+            this.firstBtn.Size = new System.Drawing.Size(105, 39);
             this.firstBtn.TabIndex = 11;
             this.firstBtn.Text = "&First";
             this.firstBtn.UseVisualStyleBackColor = true;
@@ -206,10 +200,10 @@ namespace studentProgressionTracker
             // 
             // previousBtn
             // 
-            this.previousBtn.Location = new System.Drawing.Point(145, 432);
-            this.previousBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.previousBtn.Location = new System.Drawing.Point(193, 532);
+            this.previousBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.previousBtn.Name = "previousBtn";
-            this.previousBtn.Size = new System.Drawing.Size(79, 32);
+            this.previousBtn.Size = new System.Drawing.Size(105, 39);
             this.previousBtn.TabIndex = 12;
             this.previousBtn.Text = "&Previous";
             this.previousBtn.UseVisualStyleBackColor = true;
@@ -217,10 +211,10 @@ namespace studentProgressionTracker
             // 
             // nextBtn
             // 
-            this.nextBtn.Location = new System.Drawing.Point(332, 432);
-            this.nextBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nextBtn.Location = new System.Drawing.Point(443, 532);
+            this.nextBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nextBtn.Name = "nextBtn";
-            this.nextBtn.Size = new System.Drawing.Size(79, 32);
+            this.nextBtn.Size = new System.Drawing.Size(105, 39);
             this.nextBtn.TabIndex = 13;
             this.nextBtn.Text = "&Next";
             this.nextBtn.UseVisualStyleBackColor = true;
@@ -228,10 +222,10 @@ namespace studentProgressionTracker
             // 
             // lastBtn
             // 
-            this.lastBtn.Location = new System.Drawing.Point(428, 432);
-            this.lastBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lastBtn.Location = new System.Drawing.Point(571, 532);
+            this.lastBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lastBtn.Name = "lastBtn";
-            this.lastBtn.Size = new System.Drawing.Size(79, 32);
+            this.lastBtn.Size = new System.Drawing.Size(105, 39);
             this.lastBtn.TabIndex = 14;
             this.lastBtn.Text = "&Last";
             this.lastBtn.UseVisualStyleBackColor = true;
@@ -239,10 +233,10 @@ namespace studentProgressionTracker
             // 
             // updateBtn
             // 
-            this.updateBtn.Location = new System.Drawing.Point(528, 115);
-            this.updateBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updateBtn.Location = new System.Drawing.Point(704, 142);
+            this.updateBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(99, 35);
+            this.updateBtn.Size = new System.Drawing.Size(132, 43);
             this.updateBtn.TabIndex = 15;
             this.updateBtn.Text = "&Update/Save";
             this.updateBtn.UseVisualStyleBackColor = true;
@@ -250,10 +244,10 @@ namespace studentProgressionTracker
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(528, 178);
-            this.addBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addBtn.Location = new System.Drawing.Point(704, 219);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(99, 35);
+            this.addBtn.Size = new System.Drawing.Size(132, 43);
             this.addBtn.TabIndex = 16;
             this.addBtn.Text = "&Add";
             this.addBtn.UseVisualStyleBackColor = true;
@@ -261,10 +255,10 @@ namespace studentProgressionTracker
             // 
             // deleteBtn
             // 
-            this.deleteBtn.Location = new System.Drawing.Point(528, 240);
-            this.deleteBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deleteBtn.Location = new System.Drawing.Point(704, 295);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(99, 35);
+            this.deleteBtn.Size = new System.Drawing.Size(132, 43);
             this.deleteBtn.TabIndex = 17;
             this.deleteBtn.Text = "&Delete";
             this.deleteBtn.UseVisualStyleBackColor = true;
@@ -272,20 +266,20 @@ namespace studentProgressionTracker
             // 
             // searchBtn
             // 
-            this.searchBtn.Location = new System.Drawing.Point(528, 303);
-            this.searchBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchBtn.Location = new System.Drawing.Point(704, 373);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(99, 35);
+            this.searchBtn.Size = new System.Drawing.Size(132, 43);
             this.searchBtn.TabIndex = 18;
             this.searchBtn.Text = "&Search";
             this.searchBtn.UseVisualStyleBackColor = true;
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(528, 366);
-            this.cancelBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cancelBtn.Location = new System.Drawing.Point(704, 450);
+            this.cancelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(99, 35);
+            this.cancelBtn.Size = new System.Drawing.Size(132, 43);
             this.cancelBtn.TabIndex = 19;
             this.cancelBtn.Text = "&Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
@@ -293,10 +287,10 @@ namespace studentProgressionTracker
             // 
             // exitBtn
             // 
-            this.exitBtn.Location = new System.Drawing.Point(528, 428);
-            this.exitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exitBtn.Location = new System.Drawing.Point(704, 527);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(99, 35);
+            this.exitBtn.Size = new System.Drawing.Size(132, 43);
             this.exitBtn.TabIndex = 20;
             this.exitBtn.Text = "E&xit";
             this.exitBtn.UseVisualStyleBackColor = true;
@@ -308,10 +302,9 @@ namespace studentProgressionTracker
             this.lblWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblWelcome.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblWelcome.Location = new System.Drawing.Point(196, 40);
-            this.lblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWelcome.Location = new System.Drawing.Point(261, 49);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(341, 32);
+            this.lblWelcome.Size = new System.Drawing.Size(431, 41);
             this.lblWelcome.TabIndex = 32;
             this.lblWelcome.Text = "Assignment Information";
             this.lblWelcome.Click += new System.EventHandler(this.lblWelcome_Click);
@@ -321,18 +314,19 @@ namespace studentProgressionTracker
             this.picboxHome.BackgroundImage = global::studentProgressionTracker.Properties.Resources.killester;
             this.picboxHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picboxHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picboxHome.Location = new System.Drawing.Point(12, 11);
+            this.picboxHome.Location = new System.Drawing.Point(16, 14);
+            this.picboxHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picboxHome.Name = "picboxHome";
-            this.picboxHome.Size = new System.Drawing.Size(114, 90);
+            this.picboxHome.Size = new System.Drawing.Size(152, 111);
             this.picboxHome.TabIndex = 33;
             this.picboxHome.TabStop = false;
             this.picboxHome.Click += new System.EventHandler(this.picboxHome_Click);
             // 
             // frmAssingmentRecs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 483);
+            this.ClientSize = new System.Drawing.Size(848, 594);
             this.Controls.Add(this.picboxHome);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.exitBtn);
@@ -353,7 +347,7 @@ namespace studentProgressionTracker
             this.Controls.Add(this.taskNameTbx);
             this.Controls.Add(this.taskValueTbx);
             this.Controls.Add(this.assignmentsGbx);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAssingmentRecs";
             this.Text = "Assignments informtation";
             this.Load += new System.EventHandler(this.frmAssingmentRecs_Load);
