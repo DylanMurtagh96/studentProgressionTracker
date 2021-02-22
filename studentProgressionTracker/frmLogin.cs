@@ -13,11 +13,6 @@ namespace studentProgressionTracker
 {
     public partial class frmLogin : Form
     {
-        OleDbConnection conn;
-        OleDbCommand studentCommand;
-        OleDbDataAdapter studentAdapter;
-        DataTable studentTable;
-
         public frmLogin()
         {
             InitializeComponent();
@@ -36,7 +31,6 @@ namespace studentProgressionTracker
                 cmd.Parameters.AddWithValue("@p1", txtUsername.Text);
                 cmd.Parameters.AddWithValue("@p2", txtPassword.Text);  
                 int result = (int)cmd.ExecuteScalar();
-
 
                 if (result > 0)
                 {

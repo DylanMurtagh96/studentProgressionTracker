@@ -8,16 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-
+//using System.Data.SqlClient;
 
 namespace studentProgressionTracker
 {
     public partial class frmAssingmentRecs : Form
     {
+        //SqlConnection conn;
         OleDbConnection conn;
+        //SqlCommand taskCommand;
         OleDbCommand taskCommand;
+        //SqlDataAdapter taskAdapter = new SqlDataAdapter();
         OleDbDataAdapter taskAdapter;
+        //DataSet taskDataSet;
         DataTable taskTable;
+        //string taskCommand1 = null;
+        //string taskCommand2 = null;
         CurrencyManager taskManager;
         OleDbCommandBuilder taskCommBuilder;
 
@@ -32,37 +38,69 @@ namespace studentProgressionTracker
         //binds the data to the text boxes
         private void frmAssingmentRecs_Load(object sender, EventArgs e)
         {
-            var connString = @"Provider = Microsoft.ACE.OLEDB.12.0;" +
-                            @"Data Source = ..\..\..\courseModuleDB.accdb;";
+            var connString = @"Provider = Microsoft.ACE.OLEDB.12.0;" + @"Data Source = ..\..\..\courseModuleDB.accdb;";
             //+ @" Jet OLEDB:Database Password = killester";
 
+            //conn = new SqlConnection(connString);
             conn = new OleDbConnection(connString);
             conn.Open();
+            //taskCommand1 = "Select * from assignmentsTbl";
+            //taskCommand2 = "Select * from courseModules";
+            
             recordTrackerTbx.Text = conn.State.ToString();
 
             //create command object and pass SQL command and connection object 
             taskCommand = new OleDbCommand("Select * from assignmentsTbl", conn);
-            //create a data table
+            //taskCommand = new SqlCommand(taskCommand1, conn);
+            //taskAdapter.SelectCommand = taskCommand;
+            //taskAdapter.Fill(taskDataSet, "Table(0)");
+            //taskAdapter.SelectCommand.CommandText = taskCommand2;
             taskAdapter = new OleDbDataAdapter();
             taskAdapter.SelectCommand = taskCommand;
-            //create table
             taskTable = new DataTable();
-            //fill the data table witht the info returned from the query using the data adapter
             taskAdapter.Fill(taskTable);
+            //taskAdapter.Dispose();
+            //taskCommand.Dispose();
+            //conn.Close();
+            //taskDataSet.Tables[0].Merge(taskDataSet.Tables[1]);
+            //taskTable = taskDataSet.Tables[0];
+            //for (int i = 0; i <= taskDataSet.Tables[0].Rows.Count - 1; i++)
+            //{
+            //    MessageBox.Show(taskDataSet.Tables[0].Rows[i].ItemArray[0] + " -- " + taskDataSet.Tables[0].Rows[i].ItemArray[1]);
+           // }
+            //retrieve second table data 
+            //for (int i = 0; i <= taskDataSet.Tables[1].Rows.Count - 1; i++)
+           // {
+           //     MessageBox.Show(taskDataSet.Tables[1].Rows[i].ItemArray[0] + " -- " + //taskDataSet.Tables[1].Rows[i].ItemArray[1]);
 
-            //dataBinding
+           // }
+
+
+
+            ////taskCommand2 = new SqlCommand("Select * from courseModules", conn);
+            ////taskCommand = new OleDbCommand("Select * from assignmentsTbl, courseModules where assignmentsTbl.moduleID = courseModules.moduleID and assignmentTbl.moduleID = 'M02'", conn);
+            ////create a data table
+            ////taskAdapter = new OleDbDataAdapter();
+            ////taskAdapter.SelectCommand = taskCommand;
+            ////create table
+            ////taskTable = new DataTable();
+            //taskDataSet = new DataSet();
+            ////fill the data table witht the info returned from the query using the data adapter
+            //taskAdapter.Fill(taskTable);
+
+            ////dataBinding
             taskIDTbx.DataBindings.Add("Text", taskTable, "taskID");
             courseIDTbx.DataBindings.Add("Text", taskTable, "courseID");
             moduleIDTbx.DataBindings.Add("Text", taskTable, "moduleID");
-            //weekBeginningTbx.DataBindings.Add("Text", moduleTable, "weekBeginning");
-            //durationTbx.DataBindings.Add("Text", moduleTable, "moduleDuration");
+            ////weekBeginningTbx.DataBindings.Add("Text", moduleTable, "weekBeginning");
+            ////durationTbx.DataBindings.Add("Text", moduleTable, "moduleDuration");
             taskNameTbx.DataBindings.Add("Text", taskTable, "taskName");
             taskValueTbx.DataBindings.Add("Text", taskTable, "taskValue");
             taskOutlineTbx.DataBindings.Add("Text", taskTable, "taskOutline");
 
-            //dateRegisteredTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "DateRegistered", true, DataSourceUpdateMode.OnPropertyChanged, null, "dd/MM/yyyy"));
-            //rentalPerDayTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "RentalPerDay", true, DataSourceUpdateMode.OnPropertyChanged, null, "c2"));
-            //availableCbx.DataBindings.Add("CheckState", carTable, "Available", true, DataSourceUpdateMode.OnPropertyChanged, CheckState.Unchecked);
+            ////dateRegisteredTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "DateRegistered", true, DataSourceUpdateMode.OnPropertyChanged, null, "dd/MM/yyyy"));
+            ////rentalPerDayTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "RentalPerDay", true, DataSourceUpdateMode.OnPropertyChanged, null, "c2"));
+            ////availableCbx.DataBindings.Add("CheckState", carTable, "Available", true, DataSourceUpdateMode.OnPropertyChanged, CheckState.Unchecked);
 
             taskManager = (CurrencyManager)BindingContext[taskTable];
             recordCount();
@@ -213,5 +251,14 @@ namespace studentProgressionTracker
             menuForm.Closed += (s, args) => this.Close();
             menuForm.ShowDialog();
         }
+
+        //private void picboxHome_Click(object sender, EventArgs e)
+        //{
+        //    this.Close();
+        //    this.Hide();
+        //    frmMenu menuForm = new frmMenu();
+        //    menuForm.Closed += (s, args) => this.Close();
+        //    menuForm.ShowDialog();
+        //}
     }
 }

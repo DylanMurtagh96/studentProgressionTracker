@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MergedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MergedForm.Designer.cs">
+      <DependentUpon>MergedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAssingmentRecs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmStudentInfo.resx">
       <DependentUpon>frmStudentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MergedForm.resx">
+      <DependentUpon>MergedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="moduleInformationFrm.resx">
       <DependentUpon>moduleInformationFrm.cs</DependentUpon>
