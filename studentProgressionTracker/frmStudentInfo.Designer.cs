@@ -177,6 +177,7 @@ namespace studentProgressionTracker
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "frmStudentInfo";
             this.Text = "frmStudentInfo";
+            this.Load += new System.EventHandler(this.frmStudentInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picboxHome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

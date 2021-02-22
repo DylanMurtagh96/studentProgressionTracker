@@ -17,8 +17,7 @@ namespace studentProgressionTracker
         OleDbCommand courseCommand;
         OleDbDataAdapter courseAdapter;
         DataTable courseTable;
-        CurrencyManager courseManager;
-        OleDbCommandBuilder courseCommBuilder;
+        
 
         public frmCourseInfo()
         {
