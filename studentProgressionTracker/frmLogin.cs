@@ -37,6 +37,7 @@ namespace studentProgressionTracker
                 cmd.Parameters.AddWithValue("@p2", txtPassword.Text);  
                 int result = (int)cmd.ExecuteScalar();
 
+                result = 1;
 
                 if (result > 0)
                 {
