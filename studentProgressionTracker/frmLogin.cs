@@ -13,11 +13,6 @@ namespace studentProgressionTracker
 {
     public partial class frmLogin : Form
     {
-        OleDbConnection conn;
-        OleDbCommand studentCommand;
-        OleDbDataAdapter studentAdapter;
-        DataTable studentTable;
-
         public frmLogin()
         {
             InitializeComponent();
