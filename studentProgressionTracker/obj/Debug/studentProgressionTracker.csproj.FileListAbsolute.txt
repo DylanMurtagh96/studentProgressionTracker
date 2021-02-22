@@ -51,3 +51,4 @@ C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\stud
 C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\studentProgressionTracker.exe
 C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\studentProgressionTracker.pdb
 C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\studentProgressionTracker.frmAssingmentRecs.resources
+C:\Users\dylan\Source\Repos\DylanMurtagh96\studentProgressionTracker\studentProgressionTracker\obj\Debug\studentProgressionTracker.frmAssingmentRecs.resources

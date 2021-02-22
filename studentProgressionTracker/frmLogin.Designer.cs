@@ -92,7 +92,7 @@ namespace studentProgressionTracker
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(178, 21);
             this.txtUsername.TabIndex = 2;
-            this.txtUsername.Text = "Shauna Doyle";
+            this.txtUsername.Text = "AWG001";
             // 
             // lblPassword
             // 
