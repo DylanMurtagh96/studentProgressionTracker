@@ -84,6 +84,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAssingmentRecs.resx">
+      <DependentUpon>frmAssingmentRecs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCourseInfo.resx">
       <DependentUpon>frmCourseInfo.cs</DependentUpon>
     </EmbeddedResource>

@@ -50,3 +50,4 @@ C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\stud
 C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\studentProgressionTracker.csproj.CoreCompileInputs.cache
 C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\studentProgressionTracker.exe
 C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\studentProgressionTracker.pdb
+C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\studentProgressionTracker.frmAssingmentRecs.resources
