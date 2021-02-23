@@ -21,9 +21,10 @@ namespace studentProgressionTracker
         OleDbCommandBuilder moduleCommBuilder;
 
         bool dbError = false;
-
-        public moduleInformationFrm()
+        String username;
+        public moduleInformationFrm(String un)
         {
+            username = un;
             InitializeComponent();
         }
         ////This code is run each time the application is opened it connects to the database and
@@ -205,7 +206,7 @@ namespace studentProgressionTracker
             }
             this.Close();
             this.Hide();
-            frmMenu menuForm = new frmMenu();
+            frmMenu menuForm = new frmMenu(username);
             menuForm.Closed += (s, args) => this.Close();
             menuForm.ShowDialog();
         }
@@ -218,7 +219,7 @@ namespace studentProgressionTracker
         private void picboxHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmMenu menuForm = new frmMenu();
+            frmMenu menuForm = new frmMenu(username);
             menuForm.Closed += (s, args) => this.Close();
             menuForm.ShowDialog();
         }

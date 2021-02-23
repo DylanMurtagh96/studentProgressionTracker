@@ -17,16 +17,18 @@ namespace studentProgressionTracker
         OleDbCommand studentCommand;
         OleDbDataAdapter studentAdapter;
         DataTable studentTable;
+        String username;
 
-        public frmStudentInfo()
+        public frmStudentInfo(String un)
         {
+            username = un;
             InitializeComponent();
         }
 
         private void picboxHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmMenu menuForm = new frmMenu();
+            frmMenu menuForm = new frmMenu(username);
             menuForm.Closed += (s, args) => this.Close();
             menuForm.ShowDialog();
         }
@@ -41,7 +43,7 @@ namespace studentProgressionTracker
             conn.Open();
 
             //create command object and pass SQL command and connection object 
-            studentCommand = new OleDbCommand("Select * from student", conn);
+            studentCommand = new OleDbCommand("Select * from student where studentID='" + username + "'", conn);
             //create a data table
             studentAdapter = new OleDbDataAdapter();
             studentAdapter.SelectCommand = studentCommand;

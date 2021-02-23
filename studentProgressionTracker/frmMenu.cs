@@ -12,14 +12,16 @@ namespace studentProgressionTracker
 {
     public partial class frmMenu : Form
     {
-        public frmMenu()
+        String username;
+        public frmMenu(String un)
         {
+            username = un;
             InitializeComponent();
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-                 
+            lblWelcome.Text = ("Welcome, "  + username);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -30,7 +32,7 @@ namespace studentProgressionTracker
         private void btnCourse_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            moduleInformationFrm moduleForm = new moduleInformationFrm();
+            moduleInformationFrm moduleForm = new moduleInformationFrm(username);
             moduleForm.Closed += (s, args) => this.Close();
             moduleForm.ShowDialog();
 
@@ -39,7 +41,7 @@ namespace studentProgressionTracker
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmCourseInfo courseForm = new frmCourseInfo();
+            frmCourseInfo courseForm = new frmCourseInfo(username);
             courseForm.Closed += (s, args) => this.Close();
             courseForm.ShowDialog();
         }
@@ -47,7 +49,7 @@ namespace studentProgressionTracker
         private void btnStudent_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmStudentInfo studentForm = new frmStudentInfo();
+            frmStudentInfo studentForm = new frmStudentInfo(username);
             studentForm.Closed += (s, args) => this.Close();
             studentForm.ShowDialog();
         }
@@ -55,7 +57,7 @@ namespace studentProgressionTracker
         private void btnAssingment_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmAssingmentRecs assingmentForm = new frmAssingmentRecs();
+            frmAssingmentRecs assingmentForm = new frmAssingmentRecs(username);
             assingmentForm.Closed += (s, args) => this.Close();
             assingmentForm.ShowDialog();
         }

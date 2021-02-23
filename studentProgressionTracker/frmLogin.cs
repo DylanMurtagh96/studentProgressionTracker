@@ -34,8 +34,9 @@ namespace studentProgressionTracker
 
                 if (result > 0)
                 {
+                    String username = txtUsername.Text;
                     this.Hide();
-                    frmMenu menuForm = new frmMenu();
+                    frmMenu menuForm = new frmMenu(username);
                     menuForm.Closed += (s, args) => this.Close();
                     menuForm.ShowDialog();
                 }

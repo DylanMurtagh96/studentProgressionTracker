@@ -47,9 +47,8 @@ namespace studentProgressionTracker
             this.lblWelcome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblWelcome.Location = new System.Drawing.Point(153, 44);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(210, 25);
+            this.lblWelcome.Size = new System.Drawing.Size(0, 25);
             this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome, Shauna ";
             // 
             // btnModule
             // 

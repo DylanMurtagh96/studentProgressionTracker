@@ -56,3 +56,4 @@ C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\stud
 =======
 C:\Users\dylan\Source\Repos\DylanMurtagh96\studentProgressionTracker\studentProgressionTracker\obj\Debug\studentProgressionTracker.frmAssingmentRecs.resources
 >>>>>>> d7aee5b53788ed877faf1ee6c56fddf3a235087e
+C:\Users\dylan\Source\Repos\DylanMurtagh96\studentProgressionTracker\studentProgressionTracker\obj\Debug\studentProgressionTracker.Form1.resources

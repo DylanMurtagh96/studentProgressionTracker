@@ -17,10 +17,11 @@ namespace studentProgressionTracker
         OleDbCommand courseCommand;
         OleDbDataAdapter courseAdapter;
         DataTable courseTable;
-        
+        String username;
 
-        public frmCourseInfo()
+        public frmCourseInfo(String un)
         {
+            username = un;
             InitializeComponent();
         }
 
@@ -55,7 +56,7 @@ namespace studentProgressionTracker
         private void picboxHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmMenu menuForm = new frmMenu();
+            frmMenu menuForm = new frmMenu(username);
             menuForm.Closed += (s, args) => this.Close();
             menuForm.ShowDialog();
         }
