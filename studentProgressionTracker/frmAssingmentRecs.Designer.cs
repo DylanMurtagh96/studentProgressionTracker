@@ -273,6 +273,7 @@ namespace studentProgressionTracker
             this.searchBtn.TabIndex = 18;
             this.searchBtn.Text = "&Search";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // cancelBtn
             // 
@@ -315,7 +316,7 @@ namespace studentProgressionTracker
             this.picboxHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picboxHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picboxHome.Location = new System.Drawing.Point(16, 14);
-            this.picboxHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picboxHome.Margin = new System.Windows.Forms.Padding(4);
             this.picboxHome.Name = "picboxHome";
             this.picboxHome.Size = new System.Drawing.Size(152, 111);
             this.picboxHome.TabIndex = 33;

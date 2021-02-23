@@ -340,6 +340,7 @@
             this.searchBtn.TabIndex = 27;
             this.searchBtn.Text = "&Search";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // cancelBtn
             // 

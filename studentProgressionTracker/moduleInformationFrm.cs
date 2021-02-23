@@ -222,6 +222,14 @@ namespace studentProgressionTracker
             menuForm.Closed += (s, args) => this.Close();
             menuForm.ShowDialog();
         }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mergedFrm MergedForm = new mergedFrm();
+            MergedForm.Closed += (s, args) => this.Close();
+            MergedForm.ShowDialog();
+        }
     }
 
     

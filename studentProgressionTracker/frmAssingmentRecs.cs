@@ -14,16 +14,10 @@ namespace studentProgressionTracker
 {
     public partial class frmAssingmentRecs : Form
     {
-        //SqlConnection conn;
         OleDbConnection conn;
-        //SqlCommand taskCommand;
         OleDbCommand taskCommand;
-        //SqlDataAdapter taskAdapter = new SqlDataAdapter();
         OleDbDataAdapter taskAdapter;
-        //DataSet taskDataSet;
         DataTable taskTable;
-        //string taskCommand1 = null;
-        //string taskCommand2 = null;
         CurrencyManager taskManager;
         OleDbCommandBuilder taskCommBuilder;
 
@@ -41,53 +35,19 @@ namespace studentProgressionTracker
             var connString = @"Provider = Microsoft.ACE.OLEDB.12.0;" + @"Data Source = ..\..\..\courseModuleDB.accdb;";
             //+ @" Jet OLEDB:Database Password = killester";
 
-            //conn = new SqlConnection(connString);
             conn = new OleDbConnection(connString);
             conn.Open();
-            //taskCommand1 = "Select * from assignmentsTbl";
-            //taskCommand2 = "Select * from courseModules";
-            
+                   
             recordTrackerTbx.Text = conn.State.ToString();
 
             //create command object and pass SQL command and connection object 
-            taskCommand = new OleDbCommand("Select * from assignmentsTbl", conn);
-            //taskCommand = new SqlCommand(taskCommand1, conn);
-            //taskAdapter.SelectCommand = taskCommand;
-            //taskAdapter.Fill(taskDataSet, "Table(0)");
-            //taskAdapter.SelectCommand.CommandText = taskCommand2;
+            String cmdTxt = "Select * from assignmentsTbl Where assignmentsTbl.moduleID = 'M02'";
+            taskCommand = new OleDbCommand(cmdTxt, conn);
             taskAdapter = new OleDbDataAdapter();
             taskAdapter.SelectCommand = taskCommand;
             taskTable = new DataTable();
             taskAdapter.Fill(taskTable);
-            //taskAdapter.Dispose();
-            //taskCommand.Dispose();
-            //conn.Close();
-            //taskDataSet.Tables[0].Merge(taskDataSet.Tables[1]);
-            //taskTable = taskDataSet.Tables[0];
-            //for (int i = 0; i <= taskDataSet.Tables[0].Rows.Count - 1; i++)
-            //{
-            //    MessageBox.Show(taskDataSet.Tables[0].Rows[i].ItemArray[0] + " -- " + taskDataSet.Tables[0].Rows[i].ItemArray[1]);
-           // }
-            //retrieve second table data 
-            //for (int i = 0; i <= taskDataSet.Tables[1].Rows.Count - 1; i++)
-           // {
-           //     MessageBox.Show(taskDataSet.Tables[1].Rows[i].ItemArray[0] + " -- " + //taskDataSet.Tables[1].Rows[i].ItemArray[1]);
-
-           // }
-
-
-
-            ////taskCommand2 = new SqlCommand("Select * from courseModules", conn);
-            ////taskCommand = new OleDbCommand("Select * from assignmentsTbl, courseModules where assignmentsTbl.moduleID = courseModules.moduleID and assignmentTbl.moduleID = 'M02'", conn);
-            ////create a data table
-            ////taskAdapter = new OleDbDataAdapter();
-            ////taskAdapter.SelectCommand = taskCommand;
-            ////create table
-            ////taskTable = new DataTable();
-            //taskDataSet = new DataSet();
-            ////fill the data table witht the info returned from the query using the data adapter
-            //taskAdapter.Fill(taskTable);
-
+            
             ////dataBinding
             taskIDTbx.DataBindings.Add("Text", taskTable, "taskID");
             courseIDTbx.DataBindings.Add("Text", taskTable, "courseID");
@@ -255,6 +215,15 @@ namespace studentProgressionTracker
         private void picboxHome_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            //this.Close();
+            this.Hide();
+            mergedFrm mergedFrm = new mergedFrm();
+            mergedFrm.Closed += (s, args) => this.Close();
+            mergedFrm.ShowDialog();
         }
     }
 }
