@@ -59,8 +59,8 @@
             this.searchBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
-            this.picboxHome = new System.Windows.Forms.PictureBox();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.picboxHome = new System.Windows.Forms.PictureBox();
             this.scheduleItemsGbx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxHome)).BeginInit();
             this.SuspendLayout();
@@ -364,18 +364,6 @@
             this.exitBtn.UseVisualStyleBackColor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // picboxHome
-            // 
-            this.picboxHome.BackgroundImage = global::studentProgressionTracker.Properties.Resources.killester;
-            this.picboxHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picboxHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picboxHome.Location = new System.Drawing.Point(16, 12);
-            this.picboxHome.Name = "picboxHome";
-            this.picboxHome.Size = new System.Drawing.Size(133, 90);
-            this.picboxHome.TabIndex = 30;
-            this.picboxHome.TabStop = false;
-            this.picboxHome.Click += new System.EventHandler(this.picboxHome_Click);
-            // 
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
@@ -388,15 +376,26 @@
             this.lblWelcome.TabIndex = 31;
             this.lblWelcome.Text = "Module Information";
             // 
+            // picboxHome
+            // 
+            this.picboxHome.BackgroundImage = global::studentProgressionTracker.Properties.Resources.killester;
+            this.picboxHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picboxHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picboxHome.Location = new System.Drawing.Point(16, 21);
+            this.picboxHome.Name = "picboxHome";
+            this.picboxHome.Size = new System.Drawing.Size(114, 90);
+            this.picboxHome.TabIndex = 34;
+            this.picboxHome.TabStop = false;
+            this.picboxHome.Click += new System.EventHandler(this.picboxHome_Click);
+            // 
             // moduleInformationFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::studentProgressionTracker.Properties.Resources.image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(749, 524);
-            this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.picboxHome);
+            this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.searchBtn);
@@ -467,8 +466,8 @@
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.Button exitBtn;
-        private System.Windows.Forms.PictureBox picboxHome;
         private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.PictureBox picboxHome;
     }
 }
 

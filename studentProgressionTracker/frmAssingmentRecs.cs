@@ -22,9 +22,11 @@ namespace studentProgressionTracker
         OleDbCommandBuilder taskCommBuilder;
 
         bool dbError = false;
+        String username;
 
-        public frmAssingmentRecs()
+        public frmAssingmentRecs(String un)
         {
+            username = un;
             InitializeComponent();
         }
 
@@ -207,14 +209,17 @@ namespace studentProgressionTracker
             }
             this.Close();
             this.Hide();
-            frmMenu menuForm = new frmMenu();
+            frmMenu menuForm = new frmMenu(username);
             menuForm.Closed += (s, args) => this.Close();
             menuForm.ShowDialog();
         }
 
         private void picboxHome_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmMenu menuForm = new frmMenu(username);
+            menuForm.Closed += (s, args) => this.Close();
+            menuForm.ShowDialog();
         }
 
         private void searchBtn_Click(object sender, EventArgs e)

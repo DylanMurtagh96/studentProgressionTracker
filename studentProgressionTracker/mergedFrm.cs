@@ -65,11 +65,7 @@ namespace studentProgressionTracker
             //for (int i = 0; i <= taskDataSet.Tables[1].Rows.Count - 1; i++)
             // {
             //     MessageBox.Show(taskDataSet.Tables[1].Rows[i].ItemArray[0] + " -- " + //taskDataSet.Tables[1].Rows[i].ItemArray[1]);
-
             // }
-
-
-
             ////taskCommand2 = new SqlCommand("Select * from courseModules", conn);
             ////taskCommand = new OleDbCommand("Select * from assignmentsTbl, courseModules where assignmentsTbl.moduleID = courseModules.moduleID and assignmentTbl.moduleID = 'M02'", conn);
             ////create a data table
@@ -80,7 +76,6 @@ namespace studentProgressionTracker
             //taskDataSet = new DataSet();
             ////fill the data table witht the info returned from the query using the data adapter
             //taskAdapter.Fill(taskTable);
-
             ////dataBinding
             //taskIDTbx.DataBindings.Add("Text", taskTable.Table(0), "taskID");
             //courseIDTbx.DataBindings.Add("Text", taskTable, "courseID");
@@ -91,11 +86,9 @@ namespace studentProgressionTracker
             //taskNameTbx.DataBindings.Add("Text", taskTable, "taskName");
             //taskValueTbx.DataBindings.Add("Text", taskTable, "taskValue");
             //taskOutlineTbx.DataBindings.Add("Text", taskTable, "taskOutline");
-
             ////dateRegisteredTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "DateRegistered", true, DataSourceUpdateMode.OnPropertyChanged, null, "dd/MM/yyyy"));
             ////rentalPerDayTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "RentalPerDay", true, DataSourceUpdateMode.OnPropertyChanged, null, "c2"));
             ////availableCbx.DataBindings.Add("CheckState", carTable, "Available", true, DataSourceUpdateMode.OnPropertyChanged, CheckState.Unchecked);
-
             taskManager = (CurrencyManager)BindingContext[taskDataSet.Tables[0]];
             recordCount();
         }

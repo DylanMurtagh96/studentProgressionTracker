@@ -36,6 +36,7 @@ namespace studentProgressionTracker
             this.btnLogout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,9 +48,8 @@ namespace studentProgressionTracker
             this.lblWelcome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblWelcome.Location = new System.Drawing.Point(153, 44);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(210, 25);
+            this.lblWelcome.Size = new System.Drawing.Size(0, 25);
             this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome, Shauna ";
             // 
             // btnModule
             // 
@@ -121,13 +121,21 @@ namespace studentProgressionTracker
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(12, 48);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 21);
+            this.txtName.TabIndex = 10;
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 386);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnAssingment);
             this.Controls.Add(this.btnStudent);
@@ -152,5 +160,6 @@ namespace studentProgressionTracker
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtName;
     }
 }
