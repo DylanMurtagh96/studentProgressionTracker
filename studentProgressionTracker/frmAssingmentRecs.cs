@@ -256,7 +256,10 @@ namespace studentProgressionTracker
 
         private void picboxHome_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmMenu menuForm = new frmMenu(username);
+            menuForm.Closed += (s, args) => this.Close();
+            menuForm.ShowDialog();
         }
     }
 }
