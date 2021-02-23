@@ -101,6 +101,7 @@ namespace studentProgressionTracker
             // 
             this.txtCourseName.Location = new System.Drawing.Point(152, 128);
             this.txtCourseName.Name = "txtCourseName";
+            this.txtCourseName.ReadOnly = true;
             this.txtCourseName.Size = new System.Drawing.Size(183, 21);
             this.txtCourseName.TabIndex = 10;
             // 
@@ -108,6 +109,7 @@ namespace studentProgressionTracker
             // 
             this.txtID.Location = new System.Drawing.Point(152, 164);
             this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(100, 21);
             this.txtID.TabIndex = 11;
             // 
@@ -115,6 +117,7 @@ namespace studentProgressionTracker
             // 
             this.txtTutor.Location = new System.Drawing.Point(152, 200);
             this.txtTutor.Name = "txtTutor";
+            this.txtTutor.ReadOnly = true;
             this.txtTutor.Size = new System.Drawing.Size(183, 21);
             this.txtTutor.TabIndex = 12;
             // 
@@ -123,6 +126,7 @@ namespace studentProgressionTracker
             this.txtAddress.Location = new System.Drawing.Point(152, 235);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
+            this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(183, 71);
             this.txtAddress.TabIndex = 13;
             // 

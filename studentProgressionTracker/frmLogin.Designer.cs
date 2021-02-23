@@ -48,6 +48,7 @@ namespace studentProgressionTracker
             this.gblogIn.Controls.Add(this.txtUsername);
             this.gblogIn.Controls.Add(this.lblPassword);
             this.gblogIn.Controls.Add(this.lblUsername);
+            this.gblogIn.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.gblogIn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gblogIn.Location = new System.Drawing.Point(189, 93);
             this.gblogIn.Name = "gblogIn";

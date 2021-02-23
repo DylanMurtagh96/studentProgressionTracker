@@ -13,3 +13,4 @@ C:\Users\dylan\Source\Repos\DylanMurtagh96\studentProgressionTracker\studentProg
 C:\Users\dylan\Source\Repos\DylanMurtagh96\studentProgressionTracker\studentProgressionTracker\obj\Debug\studentProgressionTracker.csproj.CoreCompileInputs.cache
 C:\Users\dylan\Source\Repos\DylanMurtagh96\studentProgressionTracker\studentProgressionTracker\obj\Debug\studentProgressionTracker.exe
 C:\Users\dylan\Source\Repos\DylanMurtagh96\studentProgressionTracker\studentProgressionTracker\obj\Debug\studentProgressionTracker.pdb
+C:\Users\dylan\Source\Repos\DylanMurtagh96\studentProgressionTracker\studentProgressionTracker\obj\Debug\studentProgressionTracker.csprojAssemblyReference.cache
