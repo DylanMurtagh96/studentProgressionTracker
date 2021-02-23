@@ -26,7 +26,10 @@ namespace studentProgressionTracker
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Hide();
+            frmLogin loginForm = new frmLogin();
+            loginForm.Closed += (s, args) => this.Close();
+            loginForm.ShowDialog();
         }
 
         private void btnCourse_Click(object sender, EventArgs e)
