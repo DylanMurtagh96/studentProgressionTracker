@@ -21,6 +21,11 @@ namespace studentProgressionTracker
         CurrencyManager taskManager;
         OleDbCommandBuilder taskCommBuilder;
         String username;
+
+        OleDbCommand searchCommand;
+        OleDbDataAdapter searchAdapter;
+        DataTable searchTable;
+
         bool dbError = false;
 
         public mergedFrm(String un)
@@ -40,7 +45,10 @@ namespace studentProgressionTracker
             //recordTrackerTbx.Text = conn.State.ToString();
 
             //create command object and pass SQL command and connection object 
-            String cmdTxt = "Select assignmentsTbl.moduleID, courseModules.moduleTitle from assignmentsTbl, courseModules Where assignmentsTbl.moduleID = courseModules.moduleID and courseModules.moduleID = 'M02'";
+            String cmdTxt = "Select courseModules.moduleTitle, courseModules.moduleID, courseModules.moduleOutline from courseModules";
+            //assignmentsTbl, assignmentsTbl.taskID, assignmentsTbl.taskOutline
+            //Where assignmentsTbl.moduleID = courseModules.moduleID and courseModules.moduleID 
+            //and courseModules.moduleID = 'M02'
             taskAdapter = new OleDbDataAdapter();
             taskCommand = new OleDbCommand(cmdTxt, conn);
             //taskCommand = new SqlCommand(taskCommand1, conn);
@@ -86,6 +94,8 @@ namespace studentProgressionTracker
             ////durationTbx.DataBindings.Add("Text", moduleTable, "moduleDuration");
             //taskNameTbx.DataBindings.Add("Text", taskTable, "taskName");
             //taskValueTbx.DataBindings.Add("Text", taskTable, "taskValue");
+            moduleOutlineTbx.DataBindings.Add("Text", taskDataSet.Tables[0], "moduleOutline");
+            //moduleTasksDgv.DataSource(taskDataSet.Tables[0].Select(cmdTxt1));
             //taskOutlineTbx.DataBindings.Add("Text", taskTable, "taskOutline");
             ////dateRegisteredTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "DateRegistered", true, DataSourceUpdateMode.OnPropertyChanged, null, "dd/MM/yyyy"));
             ////rentalPerDayTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "RentalPerDay", true, DataSourceUpdateMode.OnPropertyChanged, null, "c2"));
@@ -98,6 +108,20 @@ namespace studentProgressionTracker
         private void recordCount()
         {
             recordTrackerTbx.Text = (taskManager.Position + 1) + " of " + taskManager.Count;
+            updateDgv();
+        }
+
+        private void updateDgv()
+        {
+            
+            String modID = moduleIDTbx.Text;
+            String cmdTxt1 = $"Select * from assignmentsTbl where moduleID = '{modID}'";
+            searchCommand = new OleDbCommand(cmdTxt1, conn);
+            searchAdapter = new OleDbDataAdapter();
+            searchAdapter.SelectCommand = searchCommand;
+            searchTable = new DataTable();
+            searchAdapter.Fill(searchTable);
+            moduleTasksDgv.DataSource = searchTable;
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
@@ -115,6 +139,58 @@ namespace studentProgressionTracker
             frmMenu menuForm = new frmMenu(username);
             menuForm.Closed += (s, args) => this.Close();
             menuForm.ShowDialog();
+        }
+
+        private void firstBtn_Click(object sender, EventArgs e)
+        {
+            if (taskManager.Position != 0)
+            {
+                taskManager.Position = 0;
+                recordCount();
+            }
+            else
+            {
+                MessageBox.Show("You are already at the first record", "First Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void previousBtn_Click(object sender, EventArgs e)
+        {
+            if (taskManager.Position != 0)
+            {
+                taskManager.Position--;
+                recordCount();
+            }
+            else
+            {
+                MessageBox.Show("You are at the first record", "First Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void nextBtn_Click(object sender, EventArgs e)
+        {
+            if (taskManager.Position != taskManager.Count - 1)
+            {
+                taskManager.Position++;
+                recordCount();
+            }
+            else
+            {
+                MessageBox.Show("You are at the last record", "Last Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void lastBtn_Click(object sender, EventArgs e)
+        {
+            if (taskManager.Position != taskManager.Count - 1)
+            {
+                taskManager.Position = taskManager.Count - 1;
+                recordCount();
+            }
+            else
+            {
+                MessageBox.Show("You are already at the last record", "Last Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
