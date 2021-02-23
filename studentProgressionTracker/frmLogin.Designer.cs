@@ -48,12 +48,14 @@ namespace studentProgressionTracker
             this.gblogIn.Controls.Add(this.txtUsername);
             this.gblogIn.Controls.Add(this.lblPassword);
             this.gblogIn.Controls.Add(this.lblUsername);
+            this.gblogIn.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.gblogIn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gblogIn.Location = new System.Drawing.Point(189, 93);
             this.gblogIn.Name = "gblogIn";
             this.gblogIn.Size = new System.Drawing.Size(365, 238);
             this.gblogIn.TabIndex = 0;
             this.gblogIn.TabStop = false;
+            this.gblogIn.Enter += new System.EventHandler(this.gblogIn_Enter);
             // 
             // btnSignin
             // 
@@ -73,7 +75,7 @@ namespace studentProgressionTracker
             this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(37, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 23);
+            this.label1.Size = new System.Drawing.Size(77, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "Login";
             // 
@@ -82,7 +84,7 @@ namespace studentProgressionTracker
             this.txtPassword.Location = new System.Drawing.Point(154, 126);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(178, 21);
+            this.txtPassword.Size = new System.Drawing.Size(178, 24);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Text = "Password1";
             // 
@@ -90,7 +92,7 @@ namespace studentProgressionTracker
             // 
             this.txtUsername.Location = new System.Drawing.Point(154, 92);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(178, 21);
+            this.txtUsername.Size = new System.Drawing.Size(178, 24);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.Text = "AWG001";
             // 
@@ -100,7 +102,7 @@ namespace studentProgressionTracker
             this.lblPassword.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.Location = new System.Drawing.Point(38, 126);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(87, 18);
+            this.lblPassword.Size = new System.Drawing.Size(109, 23);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Password:";
             // 
@@ -110,13 +112,13 @@ namespace studentProgressionTracker
             this.lblUsername.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.Location = new System.Drawing.Point(38, 92);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(98, 18);
+            this.lblUsername.Size = new System.Drawing.Size(123, 23);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "User Name:";
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::studentProgressionTracker.Properties.Resources.image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

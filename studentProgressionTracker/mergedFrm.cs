@@ -16,15 +16,16 @@ namespace studentProgressionTracker
         OleDbConnection conn;
         OleDbCommand taskCommand;
         OleDbDataAdapter taskAdapter;
-        DataSet taskTable;
+        DataSet taskDataSet;
         //DataTable taskTable;
         CurrencyManager taskManager;
         OleDbCommandBuilder taskCommBuilder;
-
+        String username;
         bool dbError = false;
 
-        public mergedFrm()
+        public mergedFrm(String un)
         {
+            username = un;
             InitializeComponent();
         }
 
@@ -111,7 +112,7 @@ namespace studentProgressionTracker
             }
             this.Close();
             this.Hide();
-            frmMenu menuForm = new frmMenu();
+            frmMenu menuForm = new frmMenu(username);
             menuForm.Closed += (s, args) => this.Close();
             menuForm.ShowDialog();
         }

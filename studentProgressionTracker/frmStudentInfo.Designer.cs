@@ -53,7 +53,7 @@ namespace studentProgressionTracker
             this.picboxHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picboxHome.Location = new System.Drawing.Point(14, 12);
             this.picboxHome.Name = "picboxHome";
-            this.picboxHome.Size = new System.Drawing.Size(133, 90);
+            this.picboxHome.Size = new System.Drawing.Size(112, 90);
             this.picboxHome.TabIndex = 9;
             this.picboxHome.TabStop = false;
             this.toolTip1.SetToolTip(this.picboxHome, "Go To Home Menu");
@@ -125,6 +125,7 @@ namespace studentProgressionTracker
             // 
             this.txtStudentID.Location = new System.Drawing.Point(154, 126);
             this.txtStudentID.Name = "txtStudentID";
+            this.txtStudentID.ReadOnly = true;
             this.txtStudentID.Size = new System.Drawing.Size(117, 21);
             this.txtStudentID.TabIndex = 16;
             // 
@@ -132,6 +133,7 @@ namespace studentProgressionTracker
             // 
             this.txtStudentName.Location = new System.Drawing.Point(154, 162);
             this.txtStudentName.Name = "txtStudentName";
+            this.txtStudentName.ReadOnly = true;
             this.txtStudentName.Size = new System.Drawing.Size(179, 21);
             this.txtStudentName.TabIndex = 17;
             // 
@@ -139,6 +141,7 @@ namespace studentProgressionTracker
             // 
             this.txtCurrentCourse.Location = new System.Drawing.Point(154, 192);
             this.txtCurrentCourse.Name = "txtCurrentCourse";
+            this.txtCurrentCourse.ReadOnly = true;
             this.txtCurrentCourse.Size = new System.Drawing.Size(179, 21);
             this.txtCurrentCourse.TabIndex = 18;
             // 
@@ -146,6 +149,7 @@ namespace studentProgressionTracker
             // 
             this.txtStartDate.Location = new System.Drawing.Point(154, 225);
             this.txtStartDate.Name = "txtStartDate";
+            this.txtStartDate.ReadOnly = true;
             this.txtStartDate.Size = new System.Drawing.Size(140, 21);
             this.txtStartDate.TabIndex = 19;
             // 
@@ -153,6 +157,7 @@ namespace studentProgressionTracker
             // 
             this.txtProgress.Location = new System.Drawing.Point(154, 259);
             this.txtProgress.Name = "txtProgress";
+            this.txtProgress.ReadOnly = true;
             this.txtProgress.Size = new System.Drawing.Size(57, 21);
             this.txtProgress.TabIndex = 20;
             // 
