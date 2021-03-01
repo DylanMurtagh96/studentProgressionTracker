@@ -21,7 +21,7 @@ namespace studentProgressionTracker
         private void Form1_Load(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(@"data source =..\..\..\courseModuleDB.accdb");
-            SqlDataAdapter da = new SqlDataAdapter("Select * from tasksTbl", conn);
+            SqlDataAdapter da = new SqlDataAdapter("Select * from assignmentsTbl", conn);
             DataSet ds = new DataSet();
             da.Fill(ds, "as");
             da = new SqlDataAdapter("Select * from courseModules", conn);

@@ -218,7 +218,7 @@ namespace studentProgressionTracker
         private void resultBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-             MergedForm = new resultfrm(username);
+            frmResult MergedForm = new frmResult(username);
             MergedForm.Closed += (s, args) => this.Close();
             MergedForm.ShowDialog();
         }

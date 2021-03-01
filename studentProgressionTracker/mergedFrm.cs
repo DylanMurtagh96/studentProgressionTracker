@@ -69,7 +69,7 @@ namespace studentProgressionTracker
         {
             
             String modID = moduleIDTbx.Text;
-            String cmdTxt1 = $"Select * from tasksTbl where moduleID = '{modID}'";
+            String cmdTxt1 = $"Select * from assignmentsTbl where moduleID = '{modID}'";
             searchCommand = new OleDbCommand(cmdTxt1, conn);
             searchAdapter = new OleDbDataAdapter();
             searchAdapter.SelectCommand = searchCommand;
@@ -92,10 +92,10 @@ namespace studentProgressionTracker
                 taskDataSet.Dispose();
             }
             this.Close();
-            this.Hide();
-            frmMenu menuForm = new frmMenu(username);
-            menuForm.Closed += (s, args) => this.Close();
-            menuForm.ShowDialog();
+            //this.Hide();
+            //frmMenu menuForm = new frmMenu(username);
+            //menuForm.Closed += (s, args) => this.Close();
+            //menuForm.ShowDialog();
         }
 
         private void firstBtn_Click(object sender, EventArgs e)
