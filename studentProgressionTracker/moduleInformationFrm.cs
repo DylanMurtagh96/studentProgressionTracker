@@ -146,23 +146,6 @@ namespace studentProgressionTracker
             }
         }
 
-        private void addBtn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                moduleManager.AddNew();
-                MessageBox.Show("Populate the text boxes and Click the Save button when you have finished entering the data",
-                      "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                //user will get new blank slot to populate and then can save new record by pressing save
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error adding new record", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             DialogResult response;
@@ -228,6 +211,14 @@ namespace studentProgressionTracker
         {
             this.Hide();
             mergedFrm MergedForm = new mergedFrm(username);
+            MergedForm.Closed += (s, args) => this.Close();
+            MergedForm.ShowDialog();
+        }
+
+        private void resultBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+             MergedForm = new resultfrm(username);
             MergedForm.Closed += (s, args) => this.Close();
             MergedForm.ShowDialog();
         }
