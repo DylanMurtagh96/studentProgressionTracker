@@ -340,7 +340,7 @@
             this.taskBtn.TabIndex = 27;
             this.taskBtn.Text = "&See module tasks";
             this.taskBtn.UseVisualStyleBackColor = true;
-            this.taskBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            this.taskBtn.Click += new System.EventHandler(this.taskBtn_Click);
             // 
             // cancelBtn
             // 

@@ -89,10 +89,14 @@ namespace studentProgressionTracker
                 searchTable.Dispose();
                 taskCommand.Dispose();
                 taskAdapter.Dispose();
-                taskDataSet.Dispose();
+                //taskDataSet.Dispose();
             }
-            this.Close();
+            //this.Close();
             this.Hide();
+            moduleInformationFrm moduleForm = new moduleInformationFrm(username);
+            moduleForm.Closed += (s, args) => this.Close();
+            moduleForm.ShowDialog();
+            //this.Hide();
             //frmMenu menuForm = new frmMenu(username);
             //menuForm.Closed += (s, args) => this.Close();
             //menuForm.ShowDialog();
