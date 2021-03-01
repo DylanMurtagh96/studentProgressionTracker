@@ -42,64 +42,18 @@ namespace studentProgressionTracker
             conn = new OleDbConnection(connString);
             conn.Open();
 
-            //recordTrackerTbx.Text = conn.State.ToString();
+            recordTrackerTbx.Text = conn.State.ToString();
 
             //create command object and pass SQL command and connection object 
             String cmdTxt = "Select courseModules.moduleTitle, courseModules.moduleID, courseModules.moduleOutline from courseModules";
-            //assignmentsTbl, assignmentsTbl.taskID, assignmentsTbl.taskOutline
-            //Where assignmentsTbl.moduleID = courseModules.moduleID and courseModules.moduleID 
-            //and courseModules.moduleID = 'M02'
             taskAdapter = new OleDbDataAdapter();
             taskCommand = new OleDbCommand(cmdTxt, conn);
-            //taskCommand = new SqlCommand(taskCommand1, conn);
             DataSet taskDataSet = new DataSet();
             taskAdapter.SelectCommand = taskCommand;
             taskAdapter.Fill(taskDataSet, "Tables[0]");
-            //taskAdapter.SelectCommand.CommandText = taskCommand2;
-            // taskAdapter = new OleDbDataAdapter();
-            //taskAdapter.SelectCommand = taskCommand;
-            //taskTable = new DataSet();
-            //taskTable = new DataTable();
-            //taskAdapter.Fill(taskTable);
-            //taskAdapter.Dispose();
-            //taskCommand.Dispose();
-            //conn.Close();
-            //taskDataSet.Tables[0].Merge(taskDataSet.Tables[1]);
-            //taskTable = taskDataSet.Tables[0];
-            //for (int i = 0; i <= taskDataSet.Tables[0].Rows.Count - 1; i++)
-            //{
-            //    MessageBox.Show(taskDataSet.Tables[0].Rows[i].ItemArray[0] + " -- " + taskDataSet.Tables[0].Rows[i].ItemArray[1]);
-            // }
-            //retrieve second table data 
-            //for (int i = 0; i <= taskDataSet.Tables[1].Rows.Count - 1; i++)
-            // {
-            //     MessageBox.Show(taskDataSet.Tables[1].Rows[i].ItemArray[0] + " -- " + //taskDataSet.Tables[1].Rows[i].ItemArray[1]);
-            // }
-            ////taskCommand2 = new SqlCommand("Select * from courseModules", conn);
-            ////taskCommand = new OleDbCommand("Select * from assignmentsTbl, courseModules where assignmentsTbl.moduleID = courseModules.moduleID and assignmentTbl.moduleID = 'M02'", conn);
-            ////create a data table
-            ////taskAdapter = new OleDbDataAdapter();
-            ////taskAdapter.SelectCommand = taskCommand;
-            ////create table
-            ////taskTable = new DataTable();
-            //taskDataSet = new DataSet();
-            ////fill the data table witht the info returned from the query using the data adapter
-            //taskAdapter.Fill(taskTable);
-            ////dataBinding
-            //taskIDTbx.DataBindings.Add("Text", taskTable.Table(0), "taskID");
-            //courseIDTbx.DataBindings.Add("Text", taskTable, "courseID");
             moduleIDTbx.DataBindings.Add("Text", taskDataSet.Tables[0], "moduleID");
             moduleNameTbx.DataBindings.Add("Text", taskDataSet.Tables[0], "moduleTitle");
-            ////weekBeginningTbx.DataBindings.Add("Text", moduleTable, "weekBeginning");
-            ////durationTbx.DataBindings.Add("Text", moduleTable, "moduleDuration");
-            //taskNameTbx.DataBindings.Add("Text", taskTable, "taskName");
-            //taskValueTbx.DataBindings.Add("Text", taskTable, "taskValue");
             moduleOutlineTbx.DataBindings.Add("Text", taskDataSet.Tables[0], "moduleOutline");
-            //moduleTasksDgv.DataSource(taskDataSet.Tables[0].Select(cmdTxt1));
-            //taskOutlineTbx.DataBindings.Add("Text", taskTable, "taskOutline");
-            ////dateRegisteredTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "DateRegistered", true, DataSourceUpdateMode.OnPropertyChanged, null, "dd/MM/yyyy"));
-            ////rentalPerDayTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "RentalPerDay", true, DataSourceUpdateMode.OnPropertyChanged, null, "c2"));
-            ////availableCbx.DataBindings.Add("CheckState", carTable, "Available", true, DataSourceUpdateMode.OnPropertyChanged, CheckState.Unchecked);
             taskManager = (CurrencyManager)BindingContext[taskDataSet.Tables[0]];
             recordCount();
         }
@@ -130,9 +84,9 @@ namespace studentProgressionTracker
             {
                 conn.Close();
                 conn.Dispose();
-                //moduleCommand.Dispose();
-                //moduleAdapter.Dispose();
-                //moduleTable.Dispose();
+                searchCommand.Dispose();
+                searchAdapter.Dispose();
+                searchTable.Dispose();
             }
             this.Close();
             this.Hide();
@@ -191,6 +145,30 @@ namespace studentProgressionTracker
             {
                 MessageBox.Show("You are already at the last record", "Last Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void moduleTasksDgv_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void moduleTasksDgv_CellContentDoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void moduleTasksDgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String taskId = this.moduleTasksDgv.CurrentRow.Cells[0].Value.ToString();
+            taskInfoFrm taskInfo = new taskInfoFrm(moduleNameTbx.Text, taskId);
+            taskInfo.MdiParent = this.MdiParent;
+            taskInfo.Show();
+            
+        }
+
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

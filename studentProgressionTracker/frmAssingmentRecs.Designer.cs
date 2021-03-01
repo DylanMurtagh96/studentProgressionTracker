@@ -155,7 +155,7 @@ namespace studentProgressionTracker
             // taskNameLbl
             // 
             this.taskNameLbl.AutoSize = true;
-            this.taskNameLbl.Location = new System.Drawing.Point(440, 166);
+            this.taskNameLbl.Location = new System.Drawing.Point(441, 163);
             this.taskNameLbl.Name = "taskNameLbl";
             this.taskNameLbl.Size = new System.Drawing.Size(80, 17);
             this.taskNameLbl.TabIndex = 7;
