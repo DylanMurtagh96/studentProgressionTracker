@@ -69,7 +69,7 @@ namespace studentProgressionTracker
         {
             
             String modID = moduleIDTbx.Text;
-            String cmdTxt1 = $"Select * from assignmentsTbl where moduleID = '{modID}'";
+            String cmdTxt1 = $"Select * from tasksTbl where moduleID = '{modID}'";
             searchCommand = new OleDbCommand(cmdTxt1, conn);
             searchAdapter = new OleDbDataAdapter();
             searchAdapter.SelectCommand = searchCommand;
@@ -87,6 +87,9 @@ namespace studentProgressionTracker
                 searchCommand.Dispose();
                 searchAdapter.Dispose();
                 searchTable.Dispose();
+                taskCommand.Dispose();
+                taskAdapter.Dispose();
+                taskDataSet.Dispose();
             }
             this.Close();
             this.Hide();

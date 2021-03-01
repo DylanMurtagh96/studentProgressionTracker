@@ -43,7 +43,7 @@ namespace studentProgressionTracker
             recordTrackerTbx.Text = conn.State.ToString();
 
             //create command object and pass SQL command and connection object 
-            String cmdTxt = "Select * from assignmentsTbl Where assignmentsTbl.courseID = 'FIT-SD'";
+            String cmdTxt = "Select * from tasksTbl Where tasksTbl.courseID = 'FIT-SD'";
             taskCommand = new OleDbCommand(cmdTxt, conn);
             taskAdapter = new OleDbDataAdapter();
             taskAdapter.SelectCommand = taskCommand;
@@ -226,9 +226,9 @@ namespace studentProgressionTracker
         {
             //this.Close();
             this.Hide();
-            mergedFrm mergedFrm = new mergedFrm(username);
-            mergedFrm.Closed += (s, args) => this.Close();
-            mergedFrm.ShowDialog();
+            mergedFrm mergedForm = new mergedFrm(username);
+            mergedForm.Closed += (s, args) => this.Close();
+            mergedForm.ShowDialog();
         }
     }
 }
