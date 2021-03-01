@@ -61,7 +61,7 @@ namespace studentProgressionTracker
 
         private void btnCourse_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            this.Hide();
             moduleInformationFrm moduleForm = new moduleInformationFrm(username);
             moduleForm.Closed += (s, args) => this.Close();
             moduleForm.ShowDialog();
