@@ -54,7 +54,7 @@
             this.previousBtn = new System.Windows.Forms.Button();
             this.lastBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
-            this.addBtn = new System.Windows.Forms.Button();
+            this.resultBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
@@ -309,16 +309,16 @@
             this.updateBtn.UseVisualStyleBackColor = true;
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
-            // addBtn
+            // resultBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(610, 199);
-            this.addBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(108, 37);
-            this.addBtn.TabIndex = 25;
-            this.addBtn.Text = "&Add";
-            this.addBtn.UseVisualStyleBackColor = true;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            this.resultBtn.Location = new System.Drawing.Point(610, 199);
+            this.resultBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.resultBtn.Name = "resultBtn";
+            this.resultBtn.Size = new System.Drawing.Size(108, 37);
+            this.resultBtn.TabIndex = 25;
+            this.resultBtn.Text = "&Results";
+            this.resultBtn.UseVisualStyleBackColor = true;
+            this.resultBtn.Click += new System.EventHandler(this.resultBtn_Click);
             // 
             // deleteBtn
             // 
@@ -400,7 +400,7 @@
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.deleteBtn);
-            this.Controls.Add(this.addBtn);
+            this.Controls.Add(this.resultBtn);
             this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.lastBtn);
             this.Controls.Add(this.previousBtn);
@@ -461,7 +461,7 @@
         private System.Windows.Forms.Button previousBtn;
         private System.Windows.Forms.Button lastBtn;
         private System.Windows.Forms.Button updateBtn;
-        private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.Button resultBtn;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Button cancelBtn;
