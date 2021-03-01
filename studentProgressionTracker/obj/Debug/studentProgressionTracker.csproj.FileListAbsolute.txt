@@ -60,3 +60,4 @@ C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\stud
 C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\studentProgressionTracker.taskInfoFrm.resources
 C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\resultProgressionTracker.frmResult.resources
 C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\studentProgressionTracker.moduleTaskInfoFrm.resources
+C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\studentProgressionTracker.frmResult.resources
