@@ -56,7 +56,7 @@
             this.updateBtn = new System.Windows.Forms.Button();
             this.resultBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
-            this.searchBtn = new System.Windows.Forms.Button();
+            this.taskBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.lblWelcome = new System.Windows.Forms.Label();
@@ -331,16 +331,16 @@
             this.deleteBtn.UseVisualStyleBackColor = true;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
-            // searchBtn
+            // taskBtn
             // 
-            this.searchBtn.Location = new System.Drawing.Point(610, 327);
-            this.searchBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(108, 45);
-            this.searchBtn.TabIndex = 27;
-            this.searchBtn.Text = "&See module tasks";
-            this.searchBtn.UseVisualStyleBackColor = true;
-            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            this.taskBtn.Location = new System.Drawing.Point(610, 327);
+            this.taskBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.taskBtn.Name = "taskBtn";
+            this.taskBtn.Size = new System.Drawing.Size(108, 45);
+            this.taskBtn.TabIndex = 27;
+            this.taskBtn.Text = "&See module tasks";
+            this.taskBtn.UseVisualStyleBackColor = true;
+            this.taskBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // cancelBtn
             // 
@@ -398,7 +398,7 @@
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.cancelBtn);
-            this.Controls.Add(this.searchBtn);
+            this.Controls.Add(this.taskBtn);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.resultBtn);
             this.Controls.Add(this.updateBtn);
@@ -463,7 +463,7 @@
         private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.Button resultBtn;
         private System.Windows.Forms.Button deleteBtn;
-        private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.Button taskBtn;
         private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Label lblWelcome;

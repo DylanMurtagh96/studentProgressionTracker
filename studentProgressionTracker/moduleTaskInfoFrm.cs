@@ -92,7 +92,7 @@ namespace studentProgressionTracker
                 taskDataSet.Dispose();
             }
             this.Close();
-            //this.Hide();
+            this.Hide();
             //frmMenu menuForm = new frmMenu(username);
             //menuForm.Closed += (s, args) => this.Close();
             //menuForm.ShowDialog();

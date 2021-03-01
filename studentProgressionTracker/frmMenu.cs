@@ -59,7 +59,7 @@ namespace studentProgressionTracker
             loginForm.ShowDialog();
         }
 
-        private void btnCourse_Click(object sender, EventArgs e)
+        private void moduleBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
             moduleInformationFrm moduleForm = new moduleInformationFrm(username);
@@ -68,7 +68,7 @@ namespace studentProgressionTracker
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void courseInfoBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmCourseInfo courseForm = new frmCourseInfo(username);
@@ -84,7 +84,7 @@ namespace studentProgressionTracker
             studentForm.ShowDialog();
         }
 
-        private void btnAssingment_Click(object sender, EventArgs e)
+        private void taskBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmAssingmentRecs assingmentForm = new frmAssingmentRecs(username);

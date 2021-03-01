@@ -54,16 +54,9 @@ namespace studentProgressionTracker
             taskIDTbx.DataBindings.Add("Text", taskTable, "taskID");
             courseIDTbx.DataBindings.Add("Text", taskTable, "courseID");
             moduleIDTbx.DataBindings.Add("Text", taskTable, "moduleID");
-            ////weekBeginningTbx.DataBindings.Add("Text", moduleTable, "weekBeginning");
-            ////durationTbx.DataBindings.Add("Text", moduleTable, "moduleDuration");
             taskNameTbx.DataBindings.Add("Text", taskTable, "taskName");
             taskValueTbx.DataBindings.Add("Text", taskTable, "taskValue");
             taskOutlineTbx.DataBindings.Add("Text", taskTable, "taskOutline");
-
-            ////dateRegisteredTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "DateRegistered", true, DataSourceUpdateMode.OnPropertyChanged, null, "dd/MM/yyyy"));
-            ////rentalPerDayTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "RentalPerDay", true, DataSourceUpdateMode.OnPropertyChanged, null, "c2"));
-            ////availableCbx.DataBindings.Add("CheckState", carTable, "Available", true, DataSourceUpdateMode.OnPropertyChanged, CheckState.Unchecked);
-
             taskManager = (CurrencyManager)BindingContext[taskTable];
             recordCount();
         }
@@ -224,11 +217,10 @@ namespace studentProgressionTracker
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            //this.Close();
             this.Hide();
-            moduleTaskInfoFrm mergedForm = new moduleTaskInfoFrm(username);
-            mergedForm.Closed += (s, args) => this.Close();
-            mergedForm.ShowDialog();
+            moduleTaskInfoFrm ModuleTaskForm = new moduleTaskInfoFrm(username);
+            ModuleTaskForm.Closed += (s, args) => this.Close();
+            ModuleTaskForm.ShowDialog();
         }
     }
 }
