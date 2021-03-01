@@ -2,24 +2,27 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
-namespace resultProgressionTracker
+namespace studentProgressionTracker
 {
     public partial class frmResult : Form
     {
         String username;
-        OleDbConnection conn;
-        OleDbCommand resultCommand;
-        OleDbDataAdapter resultAdapter;
-        DataTable resultTable;
 
-        public frmResult(string un)
+        OleDbConnection conn;
+        OleDbCommand moduleCommand;
+        OleDbDataAdapter moduleAdapter;
+        DataTable moduleTable;
+        CurrencyManager moduleManager;
+        OleDbCommandBuilder moduleCommBuilder;
+
+        public frmResult(String un)
         {
             InitializeComponent();
             username = un;
@@ -28,29 +31,77 @@ namespace resultProgressionTracker
         private void frmResult_Load(object sender, EventArgs e)
         {
             var connString = @"Provider = Microsoft.ACE.OLEDB.12.0;" +
-                           @"Data Source = ..\..\..\courseModuleDB.accdb;";
-
+                            @"Data Source = ..\..\..\courseModuleDB.accdb;";
 
             conn = new OleDbConnection(connString);
             conn.Open();
+            
+       
+            moduleCommand = new OleDbCommand($"Select * from {username}_Results", conn);
+         
+            moduleAdapter = new OleDbDataAdapter();
+            moduleAdapter.SelectCommand = moduleCommand;
+           
+            moduleTable = new DataTable();
+            
+            moduleAdapter.Fill(moduleTable);
 
-            //create command object and pass SQL command and connection object 
-            resultCommand = new OleDbCommand("Select * from results where resultID='" + username + "'", conn);
-            //create a data table
-            resultAdapter = new OleDbDataAdapter();
-            resultAdapter.SelectCommand = resultCommand;
-            //create table
-            resultTable = new DataTable();
-            //fill the data table witht the info returned from the query using the data adapter
-            resultAdapter.Fill(resultTable);
+            //dataBinding
+            txtModuleID.DataBindings.Add("Text", moduleTable, "moduleTitle");
+            txtResult.DataBindings.Add("Text", moduleTable, "result");
+           
+          
 
-            String cmdTxt1 = $"Select moduleID, result from results";
-            resultCommand = new OleDbCommand(cmdTxt1, conn);
-            resultAdapter = new OleDbDataAdapter();
-            resultAdapter.SelectCommand = resultCommand;
-            resultTable = new DataTable();
-            resultAdapter.Fill(resultTable);
-            moduleResultDGV.DataSource = resultTable;
+            moduleManager = (CurrencyManager)BindingContext[moduleTable];
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (moduleManager.Position != 0)
+            {
+                moduleManager.Position--;
+            }
+            else
+            {
+                MessageBox.Show("You are at the first record", "First Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (moduleManager.Position != moduleManager.Count - 1)
+            {
+                moduleManager.Position++;
+            }
+            else
+            {
+                MessageBox.Show("You are at the last record", "Last Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                moduleManager.EndCurrentEdit();
+                moduleCommBuilder = new OleDbCommandBuilder(moduleAdapter);
+                moduleAdapter.Update(moduleTable);
+                MessageBox.Show("You have successfully updated your results", "Results updated", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error saving new record", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void picboxHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMenu menuForm = new frmMenu(username);
+            menuForm.Closed += (s, args) => this.Close();
+            menuForm.ShowDialog();
         }
     }
 }
