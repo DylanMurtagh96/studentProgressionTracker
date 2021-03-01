@@ -50,7 +50,7 @@ namespace studentProgressionTracker
             //recordTrackerTbx.Text = conn.State.ToString();
 
             //create command object and pass SQL command and connection object 
-            String cmdTxt = $"Select * from tasksTbl Where tasksTbl.taskID = '{searchTask}'";
+            String cmdTxt = $"Select * from assignmentsTbl Where assignmentsTbl.taskID = '{searchTask}'";
             taskCommand = new OleDbCommand(cmdTxt, conn);
             taskAdapter = new OleDbDataAdapter();
             taskAdapter.SelectCommand = taskCommand;

@@ -70,6 +70,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMerged.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMerged.Designer.cs">
+      <DependentUpon>frmMerged.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmResult.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMerged.resx">
+      <DependentUpon>frmMerged.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmResult.resx">
       <DependentUpon>frmResult.cs</DependentUpon>

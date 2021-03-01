@@ -63,8 +63,8 @@ namespace studentProgressionTracker
         {
             this.Hide();
             moduleInformationFrm moduleForm = new moduleInformationFrm(username);
-            moduleForm.Closed += (s, args) => this.Close();
-            moduleForm.ShowDialog();
+            //moduleForm.Closed += (s, args) => this.Close();
+            //moduleForm.ShowDialog();
 
         }
 
