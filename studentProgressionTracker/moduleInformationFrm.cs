@@ -210,7 +210,7 @@ namespace studentProgressionTracker
         private void searchBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mergedFrm MergedForm = new mergedFrm(username);
+            moduleTaskInfoFrm MergedForm = new moduleTaskInfoFrm(username);
             MergedForm.Closed += (s, args) => this.Close();
             MergedForm.ShowDialog();
         }

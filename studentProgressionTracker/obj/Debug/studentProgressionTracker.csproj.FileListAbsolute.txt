@@ -59,3 +59,4 @@ C:\Users\dylan\Source\Repos\DylanMurtagh96\studentProgressionTracker\studentProg
 C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\studentProgressionTracker.mergedFrm.resources
 C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\studentProgressionTracker.taskInfoFrm.resources
 C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\resultProgressionTracker.frmResult.resources
+C:\Users\kinca\source\repos\teamProject\studentProgressionTracker\obj\Debug\studentProgressionTracker.moduleTaskInfoFrm.resources

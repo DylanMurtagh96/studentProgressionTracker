@@ -226,7 +226,7 @@ namespace studentProgressionTracker
         {
             //this.Close();
             this.Hide();
-            mergedFrm mergedForm = new mergedFrm(username);
+            moduleTaskInfoFrm mergedForm = new moduleTaskInfoFrm(username);
             mergedForm.Closed += (s, args) => this.Close();
             mergedForm.ShowDialog();
         }

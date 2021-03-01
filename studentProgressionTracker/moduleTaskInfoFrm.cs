@@ -11,7 +11,7 @@ using System.Data.OleDb;
 
 namespace studentProgressionTracker
 {
-    public partial class mergedFrm : Form
+    public partial class moduleTaskInfoFrm : Form
     {
         OleDbConnection conn;
         OleDbCommand taskCommand;
@@ -28,7 +28,7 @@ namespace studentProgressionTracker
 
         bool dbError = false;
 
-        public mergedFrm(String un)
+        public moduleTaskInfoFrm(String un)
         {
             username = un;
             InitializeComponent();
