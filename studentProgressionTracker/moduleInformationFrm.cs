@@ -77,21 +77,8 @@ namespace studentProgressionTracker
             semesterTbx.DataBindings.Add("Text", moduleTable, "semester");
             moduleOutlineTbx.DataBindings.Add("Text", moduleTable, "moduleOutline");
 
-            //dateRegisteredTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "DateRegistered", true, DataSourceUpdateMode.OnPropertyChanged, null, "dd/MM/yyyy"));
-            //rentalPerDayTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "RentalPerDay", true, DataSourceUpdateMode.OnPropertyChanged, null, "c2"));
-            //availableCbx.DataBindings.Add("CheckState", carTable, "Available", true, DataSourceUpdateMode.OnPropertyChanged, CheckState.Unchecked);
-
             moduleManager = (CurrencyManager)BindingContext[moduleTable];
-            //recordCount();
-
-            //var connString = @"Provider = Microsoft.ACE.OLEDB.12.0;" +
-            // @"Data Source = ..\..\..\courseModuleDB.accdb;";
-
-            //conn = new OleDbConnection(connString);
-            //conn.Open();
-
-
-            //moduleCommand = new OleDbCommand($"Select * from {username}_Results", conn);
+            
             resultsGbx.Text = $"Results for {username} in the above module is";
             String cmdTxt = $"Select * from {username}_Results";
             resultsAdapter = new OleDbDataAdapter();
@@ -99,12 +86,6 @@ namespace studentProgressionTracker
             
             resultsAdapter.SelectCommand = resultsCommand;
             resultsAdapter.Fill(resultsDataSet, "results");
-            //DataRow[] record = resultsDataSet.Tables[0].Select("ModuleID = " + moduleIDTbx.Text);
-            //moduleResultTbx.DataBindings.Add("Text", resultsDataSet.Tables[0], "result");
-            //moduleIDTbx.DataBindings.Add("Text", taskDataSet.Tables[0], "moduleID");
-            //moduleNameTbx.DataBindings.Add("Text", taskDataSet.Tables[0], "moduleTitle");
-            //moduleOutlineTbx.DataBindings.Add("Text", taskDataSet.Tables[0], "moduleOutline");
-            //taskManager = (CurrencyManager)BindingContext[taskDataSet.Tables[0]];
             recordCount();
         }
 
