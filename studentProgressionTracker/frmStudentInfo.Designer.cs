@@ -181,7 +181,7 @@ namespace studentProgressionTracker
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "frmStudentInfo";
-            this.Text = "frmStudentInfo";
+            this.Text = "Student Information";
             this.Load += new System.EventHandler(this.frmStudentInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picboxHome)).EndInit();
             this.ResumeLayout(false);

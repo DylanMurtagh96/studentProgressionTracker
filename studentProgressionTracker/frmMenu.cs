@@ -91,5 +91,13 @@ namespace studentProgressionTracker
             assingmentForm.Closed += (s, args) => this.Close();
             assingmentForm.ShowDialog();
         }
+
+        private void btnResults_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmResult resultForm = new frmResult(username);
+            resultForm.Closed += (s, args) => this.Close();
+            resultForm.ShowDialog();
+        }
     }
 }
