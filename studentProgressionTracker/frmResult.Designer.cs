@@ -38,6 +38,7 @@ namespace studentProgressionTracker
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.buttonAllResults = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picboxHome)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,7 +110,7 @@ namespace studentProgressionTracker
             // 
             // btnPrevious
             // 
-            this.btnPrevious.Location = new System.Drawing.Point(19, 257);
+            this.btnPrevious.Location = new System.Drawing.Point(19, 228);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(128, 41);
             this.btnPrevious.TabIndex = 41;
@@ -119,7 +120,7 @@ namespace studentProgressionTracker
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(231, 257);
+            this.btnNext.Location = new System.Drawing.Point(231, 228);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(129, 41);
             this.btnNext.TabIndex = 42;
@@ -129,19 +130,30 @@ namespace studentProgressionTracker
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(19, 304);
+            this.btnUpdate.Location = new System.Drawing.Point(146, 228);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(341, 41);
+            this.btnUpdate.Size = new System.Drawing.Size(86, 41);
             this.btnUpdate.TabIndex = 43;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // buttonAllResults
+            // 
+            this.buttonAllResults.Location = new System.Drawing.Point(19, 275);
+            this.buttonAllResults.Name = "buttonAllResults";
+            this.buttonAllResults.Size = new System.Drawing.Size(341, 41);
+            this.buttonAllResults.TabIndex = 44;
+            this.buttonAllResults.Text = "All Results";
+            this.buttonAllResults.UseVisualStyleBackColor = true;
+            this.buttonAllResults.Click += new System.EventHandler(this.btnAllResults_Click);
             // 
             // frmResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 369);
+            this.Controls.Add(this.buttonAllResults);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrevious);
@@ -155,6 +167,7 @@ namespace studentProgressionTracker
             this.Name = "frmResult";
             this.Text = "Results";
             this.Load += new System.EventHandler(this.frmResult_Load);
+            this.Click += new System.EventHandler(this.btnAllResults_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picboxHome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -172,5 +185,6 @@ namespace studentProgressionTracker
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button buttonAllResults;
     }
 }

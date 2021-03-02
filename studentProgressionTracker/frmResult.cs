@@ -103,5 +103,13 @@ namespace studentProgressionTracker
             menuForm.Closed += (s, args) => this.Close();
             menuForm.ShowDialog();
         }
+
+        private void btnAllResults_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmResultsDGV menuForm = new frmResultsDGV(username);
+            menuForm.Closed += (s, args) => this.Close();
+            menuForm.ShowDialog();
+        }
     }
 }
