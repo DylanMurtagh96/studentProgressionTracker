@@ -31,7 +31,7 @@ namespace studentProgressionTracker
         {
             this.moduleIDTbx = new System.Windows.Forms.TextBox();
             this.moduleNameTbx = new System.Windows.Forms.TextBox();
-            this.exitBtn = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
             this.recordTrackerTbx = new System.Windows.Forms.TextBox();
             this.moduleIDLbl = new System.Windows.Forms.Label();
             this.moduleTitleLbl = new System.Windows.Forms.Label();
@@ -63,15 +63,15 @@ namespace studentProgressionTracker
             this.moduleNameTbx.Size = new System.Drawing.Size(543, 22);
             this.moduleNameTbx.TabIndex = 1;
             // 
-            // exitBtn
+            // backBtn
             // 
-            this.exitBtn.Location = new System.Drawing.Point(905, 507);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(160, 37);
-            this.exitBtn.TabIndex = 2;
-            this.exitBtn.Text = "E&xit";
-            this.exitBtn.UseVisualStyleBackColor = true;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            this.backBtn.Location = new System.Drawing.Point(905, 507);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(160, 37);
+            this.backBtn.TabIndex = 2;
+            this.backBtn.Text = "B&ack to Module info";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // recordTrackerTbx
             // 
@@ -202,7 +202,7 @@ namespace studentProgressionTracker
             this.label1.TabIndex = 36;
             this.label1.Text = "Double click on any row to see further information about the individual tasks";
             // 
-            // mergedFrm
+            // moduleTaskInfoFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -220,10 +220,10 @@ namespace studentProgressionTracker
             this.Controls.Add(this.moduleTitleLbl);
             this.Controls.Add(this.moduleIDLbl);
             this.Controls.Add(this.recordTrackerTbx);
-            this.Controls.Add(this.exitBtn);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.moduleNameTbx);
             this.Controls.Add(this.moduleIDTbx);
-            this.Name = "mergedFrm";
+            this.Name = "moduleTaskInfoFrm";
             this.Text = "Module Task Information";
             this.Load += new System.EventHandler(this.mergedFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.moduleTasksDgv)).EndInit();
@@ -237,7 +237,7 @@ namespace studentProgressionTracker
 
         private System.Windows.Forms.TextBox moduleIDTbx;
         private System.Windows.Forms.TextBox moduleNameTbx;
-        private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.TextBox recordTrackerTbx;
         private System.Windows.Forms.Label moduleIDLbl;
         private System.Windows.Forms.Label moduleTitleLbl;

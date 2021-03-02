@@ -66,8 +66,23 @@ namespace studentProgressionTracker
             taskNameTbx.DataBindings.Add("Text", taskTable, "taskName");
             taskValueTbx.DataBindings.Add("Text", taskTable, "taskValue");
             taskOutlineTbx.DataBindings.Add("Text", taskTable, "taskOutline");
-            moduleNameLbl.Text = ModuleTitle;
+            moduleNameTbx.Text = ModuleTitle;
 
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            if (!dbError)
+            {
+                conn.Close();
+                conn.Dispose();
+                taskTable.Dispose();
+                taskCommand.Dispose();
+                taskAdapter.Dispose();
+                //taskDataSet.Dispose();
+            }
+            this.Close();
+           
         }
     }
 }

@@ -61,13 +61,21 @@
             this.exitBtn = new System.Windows.Forms.Button();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.picboxHome = new System.Windows.Forms.PictureBox();
+            this.resultsGbx = new System.Windows.Forms.GroupBox();
+            this.moduleStartTbx = new System.Windows.Forms.TextBox();
+            this.moduleCompTbx = new System.Windows.Forms.TextBox();
+            this.moduleResultTbx = new System.Windows.Forms.TextBox();
+            this.modStrLbl = new System.Windows.Forms.Label();
+            this.mdouleCompLbl = new System.Windows.Forms.Label();
+            this.moduleResultLbl = new System.Windows.Forms.Label();
             this.scheduleItemsGbx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxHome)).BeginInit();
+            this.resultsGbx.SuspendLayout();
             this.SuspendLayout();
             // 
             // moduleIDTbx
             // 
-            this.moduleIDTbx.Location = new System.Drawing.Point(281, 141);
+            this.moduleIDTbx.Location = new System.Drawing.Point(281, 161);
             this.moduleIDTbx.Margin = new System.Windows.Forms.Padding(2);
             this.moduleIDTbx.Name = "moduleIDTbx";
             this.moduleIDTbx.Size = new System.Drawing.Size(59, 24);
@@ -75,7 +83,7 @@
             // 
             // courseIDTbx
             // 
-            this.courseIDTbx.Location = new System.Drawing.Point(112, 141);
+            this.courseIDTbx.Location = new System.Drawing.Point(112, 161);
             this.courseIDTbx.Margin = new System.Windows.Forms.Padding(2);
             this.courseIDTbx.Name = "courseIDTbx";
             this.courseIDTbx.Size = new System.Drawing.Size(59, 24);
@@ -99,15 +107,15 @@
             // 
             // moduleTitleTbx
             // 
-            this.moduleTitleTbx.Location = new System.Drawing.Point(112, 228);
+            this.moduleTitleTbx.Location = new System.Drawing.Point(112, 122);
             this.moduleTitleTbx.Margin = new System.Windows.Forms.Padding(2);
             this.moduleTitleTbx.Name = "moduleTitleTbx";
-            this.moduleTitleTbx.Size = new System.Drawing.Size(229, 24);
+            this.moduleTitleTbx.Size = new System.Drawing.Size(605, 24);
             this.moduleTitleTbx.TabIndex = 4;
             // 
             // NFQLvlTbx
             // 
-            this.NFQLvlTbx.Location = new System.Drawing.Point(112, 169);
+            this.NFQLvlTbx.Location = new System.Drawing.Point(112, 189);
             this.NFQLvlTbx.Margin = new System.Windows.Forms.Padding(2);
             this.NFQLvlTbx.Name = "NFQLvlTbx";
             this.NFQLvlTbx.Size = new System.Drawing.Size(59, 24);
@@ -115,7 +123,7 @@
             // 
             // awardByTbx
             // 
-            this.awardByTbx.Location = new System.Drawing.Point(112, 198);
+            this.awardByTbx.Location = new System.Drawing.Point(112, 218);
             this.awardByTbx.Margin = new System.Windows.Forms.Padding(2);
             this.awardByTbx.Name = "awardByTbx";
             this.awardByTbx.Size = new System.Drawing.Size(136, 24);
@@ -131,7 +139,7 @@
             // 
             // moduleOutlineTbx
             // 
-            this.moduleOutlineTbx.Location = new System.Drawing.Point(122, 265);
+            this.moduleOutlineTbx.Location = new System.Drawing.Point(122, 285);
             this.moduleOutlineTbx.Margin = new System.Windows.Forms.Padding(2);
             this.moduleOutlineTbx.Multiline = true;
             this.moduleOutlineTbx.Name = "moduleOutlineTbx";
@@ -141,7 +149,7 @@
             // modleIDLbl
             // 
             this.modleIDLbl.AutoSize = true;
-            this.modleIDLbl.Location = new System.Drawing.Point(202, 144);
+            this.modleIDLbl.Location = new System.Drawing.Point(202, 164);
             this.modleIDLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.modleIDLbl.Name = "modleIDLbl";
             this.modleIDLbl.Size = new System.Drawing.Size(78, 17);
@@ -151,7 +159,7 @@
             // courseIDLbl
             // 
             this.courseIDLbl.AutoSize = true;
-            this.courseIDLbl.Location = new System.Drawing.Point(32, 144);
+            this.courseIDLbl.Location = new System.Drawing.Point(32, 164);
             this.courseIDLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.courseIDLbl.Name = "courseIDLbl";
             this.courseIDLbl.Size = new System.Drawing.Size(79, 17);
@@ -191,7 +199,7 @@
             // NFQLvlLbl
             // 
             this.NFQLvlLbl.AutoSize = true;
-            this.NFQLvlLbl.Location = new System.Drawing.Point(34, 172);
+            this.NFQLvlLbl.Location = new System.Drawing.Point(34, 192);
             this.NFQLvlLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NFQLvlLbl.Name = "NFQLvlLbl";
             this.NFQLvlLbl.Size = new System.Drawing.Size(77, 17);
@@ -201,7 +209,7 @@
             // awardByLbl
             // 
             this.awardByLbl.AutoSize = true;
-            this.awardByLbl.Location = new System.Drawing.Point(36, 201);
+            this.awardByLbl.Location = new System.Drawing.Point(36, 221);
             this.awardByLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.awardByLbl.Name = "awardByLbl";
             this.awardByLbl.Size = new System.Drawing.Size(75, 17);
@@ -211,7 +219,7 @@
             // courseTitleLbl
             // 
             this.courseTitleLbl.AutoSize = true;
-            this.courseTitleLbl.Location = new System.Drawing.Point(22, 231);
+            this.courseTitleLbl.Location = new System.Drawing.Point(18, 129);
             this.courseTitleLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.courseTitleLbl.Name = "courseTitleLbl";
             this.courseTitleLbl.Size = new System.Drawing.Size(92, 17);
@@ -222,7 +230,7 @@
             // moduleOutlineLbl
             // 
             this.moduleOutlineLbl.AutoSize = true;
-            this.moduleOutlineLbl.Location = new System.Drawing.Point(7, 265);
+            this.moduleOutlineLbl.Location = new System.Drawing.Point(7, 285);
             this.moduleOutlineLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.moduleOutlineLbl.Name = "moduleOutlineLbl";
             this.moduleOutlineLbl.Size = new System.Drawing.Size(111, 17);
@@ -237,7 +245,7 @@
             this.scheduleItemsGbx.Controls.Add(this.weekBeginningTbx);
             this.scheduleItemsGbx.Controls.Add(this.durationTbx);
             this.scheduleItemsGbx.Controls.Add(this.durationLbl);
-            this.scheduleItemsGbx.Location = new System.Drawing.Point(347, 133);
+            this.scheduleItemsGbx.Location = new System.Drawing.Point(347, 153);
             this.scheduleItemsGbx.Margin = new System.Windows.Forms.Padding(2);
             this.scheduleItemsGbx.Name = "scheduleItemsGbx";
             this.scheduleItemsGbx.Padding = new System.Windows.Forms.Padding(2);
@@ -248,7 +256,7 @@
             // 
             // recordTrackerTbx
             // 
-            this.recordTrackerTbx.Location = new System.Drawing.Point(261, 469);
+            this.recordTrackerTbx.Location = new System.Drawing.Point(261, 489);
             this.recordTrackerTbx.Margin = new System.Windows.Forms.Padding(2);
             this.recordTrackerTbx.Name = "recordTrackerTbx";
             this.recordTrackerTbx.Size = new System.Drawing.Size(70, 24);
@@ -256,7 +264,7 @@
             // 
             // firstBtn
             // 
-            this.firstBtn.Location = new System.Drawing.Point(16, 459);
+            this.firstBtn.Location = new System.Drawing.Point(16, 479);
             this.firstBtn.Margin = new System.Windows.Forms.Padding(2);
             this.firstBtn.Name = "firstBtn";
             this.firstBtn.Size = new System.Drawing.Size(108, 37);
@@ -267,7 +275,7 @@
             // 
             // nextBtn
             // 
-            this.nextBtn.Location = new System.Drawing.Point(340, 459);
+            this.nextBtn.Location = new System.Drawing.Point(340, 479);
             this.nextBtn.Margin = new System.Windows.Forms.Padding(2);
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.Size = new System.Drawing.Size(108, 37);
@@ -278,7 +286,7 @@
             // 
             // previousBtn
             // 
-            this.previousBtn.Location = new System.Drawing.Point(140, 460);
+            this.previousBtn.Location = new System.Drawing.Point(140, 480);
             this.previousBtn.Margin = new System.Windows.Forms.Padding(2);
             this.previousBtn.Name = "previousBtn";
             this.previousBtn.Size = new System.Drawing.Size(108, 37);
@@ -289,7 +297,7 @@
             // 
             // lastBtn
             // 
-            this.lastBtn.Location = new System.Drawing.Point(470, 460);
+            this.lastBtn.Location = new System.Drawing.Point(470, 480);
             this.lastBtn.Margin = new System.Windows.Forms.Padding(2);
             this.lastBtn.Name = "lastBtn";
             this.lastBtn.Size = new System.Drawing.Size(108, 37);
@@ -300,7 +308,7 @@
             // 
             // updateBtn
             // 
-            this.updateBtn.Location = new System.Drawing.Point(610, 138);
+            this.updateBtn.Location = new System.Drawing.Point(610, 158);
             this.updateBtn.Margin = new System.Windows.Forms.Padding(2);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(108, 37);
@@ -311,7 +319,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(610, 199);
+            this.btnAdd.Location = new System.Drawing.Point(610, 219);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(108, 37);
@@ -322,7 +330,7 @@
             // 
             // deleteBtn
             // 
-            this.deleteBtn.Location = new System.Drawing.Point(610, 263);
+            this.deleteBtn.Location = new System.Drawing.Point(610, 283);
             this.deleteBtn.Margin = new System.Windows.Forms.Padding(2);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(108, 37);
@@ -333,7 +341,7 @@
             // 
             // taskBtn
             // 
-            this.taskBtn.Location = new System.Drawing.Point(610, 327);
+            this.taskBtn.Location = new System.Drawing.Point(610, 347);
             this.taskBtn.Margin = new System.Windows.Forms.Padding(2);
             this.taskBtn.Name = "taskBtn";
             this.taskBtn.Size = new System.Drawing.Size(108, 45);
@@ -344,7 +352,7 @@
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(610, 392);
+            this.cancelBtn.Location = new System.Drawing.Point(610, 412);
             this.cancelBtn.Margin = new System.Windows.Forms.Padding(2);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(108, 37);
@@ -355,7 +363,7 @@
             // 
             // exitBtn
             // 
-            this.exitBtn.Location = new System.Drawing.Point(610, 460);
+            this.exitBtn.Location = new System.Drawing.Point(610, 480);
             this.exitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(108, 37);
@@ -388,12 +396,80 @@
             this.picboxHome.TabStop = false;
             this.picboxHome.Click += new System.EventHandler(this.picboxHome_Click);
             // 
+            // resultsGbx
+            // 
+            this.resultsGbx.Controls.Add(this.moduleResultLbl);
+            this.resultsGbx.Controls.Add(this.mdouleCompLbl);
+            this.resultsGbx.Controls.Add(this.modStrLbl);
+            this.resultsGbx.Controls.Add(this.moduleResultTbx);
+            this.resultsGbx.Controls.Add(this.moduleCompTbx);
+            this.resultsGbx.Controls.Add(this.moduleStartTbx);
+            this.resultsGbx.Location = new System.Drawing.Point(21, 551);
+            this.resultsGbx.Name = "resultsGbx";
+            this.resultsGbx.Size = new System.Drawing.Size(696, 169);
+            this.resultsGbx.TabIndex = 35;
+            this.resultsGbx.TabStop = false;
+            this.resultsGbx.Enter += new System.EventHandler(this.resultsGbx_Enter);
+            // 
+            // moduleStartTbx
+            // 
+            this.moduleStartTbx.Location = new System.Drawing.Point(200, 37);
+            this.moduleStartTbx.Name = "moduleStartTbx";
+            this.moduleStartTbx.Size = new System.Drawing.Size(119, 24);
+            this.moduleStartTbx.TabIndex = 0;
+            this.moduleStartTbx.Text = "Currently not available";
+            this.moduleStartTbx.TextChanged += new System.EventHandler(this.moduleStartTbx_TextChanged);
+            // 
+            // moduleCompTbx
+            // 
+            this.moduleCompTbx.Location = new System.Drawing.Point(200, 78);
+            this.moduleCompTbx.Name = "moduleCompTbx";
+            this.moduleCompTbx.Size = new System.Drawing.Size(116, 24);
+            this.moduleCompTbx.TabIndex = 1;
+            this.moduleCompTbx.Text = "Currently not available";
+            // 
+            // moduleResultTbx
+            // 
+            this.moduleResultTbx.Location = new System.Drawing.Point(201, 118);
+            this.moduleResultTbx.Name = "moduleResultTbx";
+            this.moduleResultTbx.Size = new System.Drawing.Size(115, 24);
+            this.moduleResultTbx.TabIndex = 2;
+            // 
+            // modStrLbl
+            // 
+            this.modStrLbl.AutoSize = true;
+            this.modStrLbl.Location = new System.Drawing.Point(14, 41);
+            this.modStrLbl.Name = "modStrLbl";
+            this.modStrLbl.Size = new System.Drawing.Size(136, 17);
+            this.modStrLbl.TabIndex = 3;
+            this.modStrLbl.Text = "Module Start Date";
+            this.modStrLbl.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // mdouleCompLbl
+            // 
+            this.mdouleCompLbl.AutoSize = true;
+            this.mdouleCompLbl.Location = new System.Drawing.Point(11, 85);
+            this.mdouleCompLbl.Name = "mdouleCompLbl";
+            this.mdouleCompLbl.Size = new System.Drawing.Size(179, 17);
+            this.mdouleCompLbl.TabIndex = 4;
+            this.mdouleCompLbl.Text = "Module Completion Date";
+            // 
+            // moduleResultLbl
+            // 
+            this.moduleResultLbl.AutoSize = true;
+            this.moduleResultLbl.Location = new System.Drawing.Point(15, 125);
+            this.moduleResultLbl.Name = "moduleResultLbl";
+            this.moduleResultLbl.Size = new System.Drawing.Size(106, 17);
+            this.moduleResultLbl.TabIndex = 5;
+            this.moduleResultLbl.Text = "Module Result";
+            // 
             // moduleInformationFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(749, 524);
+            this.ClientSize = new System.Drawing.Size(749, 757);
+            this.Controls.Add(this.resultsGbx);
             this.Controls.Add(this.picboxHome);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.exitBtn);
@@ -429,6 +505,8 @@
             this.scheduleItemsGbx.ResumeLayout(false);
             this.scheduleItemsGbx.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxHome)).EndInit();
+            this.resultsGbx.ResumeLayout(false);
+            this.resultsGbx.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,6 +546,13 @@
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.PictureBox picboxHome;
+        private System.Windows.Forms.GroupBox resultsGbx;
+        private System.Windows.Forms.Label moduleResultLbl;
+        private System.Windows.Forms.Label mdouleCompLbl;
+        private System.Windows.Forms.Label modStrLbl;
+        private System.Windows.Forms.TextBox moduleResultTbx;
+        private System.Windows.Forms.TextBox moduleCompTbx;
+        private System.Windows.Forms.TextBox moduleStartTbx;
     }
 }
 

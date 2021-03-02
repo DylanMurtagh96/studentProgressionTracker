@@ -79,7 +79,7 @@ namespace studentProgressionTracker
             moduleTasksDgv.DataSource = searchTable;
         }
 
-        private void exitBtn_Click(object sender, EventArgs e)
+        private void backBtn_Click(object sender, EventArgs e)
         {
             if (!dbError)
             {
@@ -92,11 +92,11 @@ namespace studentProgressionTracker
                 taskAdapter.Dispose();
                 //taskDataSet.Dispose();
             }
-            //this.Close();
-            this.Hide();
-            moduleInformationFrm moduleForm = new moduleInformationFrm(username);
-            moduleForm.Closed += (s, args) => this.Close();
-            moduleForm.ShowDialog();
+            this.Close();
+            //this.Hide();
+            //moduleInformationFrm moduleForm = new moduleInformationFrm(username);
+            //moduleForm.Closed += (s, args) => this.Close();
+            //moduleForm.ShowDialog();
             //this.Hide();
             //frmMenu menuForm = new frmMenu(username);
             //menuForm.Closed += (s, args) => this.Close();

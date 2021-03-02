@@ -22,6 +22,23 @@ namespace studentProgressionTracker
 
         bool dbError = false;
         String username;
+
+        //OleDbConnection conn;
+        OleDbCommand resultsCommand;
+        OleDbDataAdapter resultsAdapter;
+        //DataSet resultsDataSet;
+        DataSet resultsDataSet = new DataSet();
+        //DataTable taskTable;
+        //CurrencyManager taskManager;
+        //OleDbCommandBuilder taskCommBuilder;
+        //String username;
+        //String modId;
+        //OleDbCommand searchCommand;
+        //OleDbDataAdapter searchAdapter;
+        //DataTable searchTable;
+
+        //bool dbError = false;
+
         public moduleInformationFrm(String un)
         {
             username = un;
@@ -65,6 +82,29 @@ namespace studentProgressionTracker
             //availableCbx.DataBindings.Add("CheckState", carTable, "Available", true, DataSourceUpdateMode.OnPropertyChanged, CheckState.Unchecked);
 
             moduleManager = (CurrencyManager)BindingContext[moduleTable];
+            //recordCount();
+
+            //var connString = @"Provider = Microsoft.ACE.OLEDB.12.0;" +
+            // @"Data Source = ..\..\..\courseModuleDB.accdb;";
+
+            //conn = new OleDbConnection(connString);
+            //conn.Open();
+
+
+            //moduleCommand = new OleDbCommand($"Select * from {username}_Results", conn);
+            resultsGbx.Text = $"Results for {username} in the above module is";
+            String cmdTxt = $"Select * from {username}_Results";
+            resultsAdapter = new OleDbDataAdapter();
+            resultsCommand = new OleDbCommand(cmdTxt, conn);
+            
+            resultsAdapter.SelectCommand = resultsCommand;
+            resultsAdapter.Fill(resultsDataSet, "results");
+            //DataRow[] record = resultsDataSet.Tables[0].Select("ModuleID = " + moduleIDTbx.Text);
+            //moduleResultTbx.DataBindings.Add("Text", resultsDataSet.Tables[0], "result");
+            //moduleIDTbx.DataBindings.Add("Text", taskDataSet.Tables[0], "moduleID");
+            //moduleNameTbx.DataBindings.Add("Text", taskDataSet.Tables[0], "moduleTitle");
+            //moduleOutlineTbx.DataBindings.Add("Text", taskDataSet.Tables[0], "moduleOutline");
+            //taskManager = (CurrencyManager)BindingContext[taskDataSet.Tables[0]];
             recordCount();
         }
 
@@ -72,8 +112,29 @@ namespace studentProgressionTracker
         private void recordCount()
         {
             recordTrackerTbx.Text = (moduleManager.Position + 1) + " of " + moduleManager.Count;
+            String moduleID = moduleIDTbx.Text;
+            getResult(moduleID);
+            
         }
 
+        private void getResult(String modId)
+        {
+            DataTable resultsTable = resultsDataSet.Tables[0];
+            String expression;
+            expression = $"ModuleID = '{modId}'";
+            DataRow[] matchingIds;
+
+            matchingIds = resultsTable.Select(expression);
+            if (matchingIds[0][10] != null)
+            {
+                moduleResultTbx.Text = matchingIds[0][10].ToString();
+            }
+            else
+            {
+                moduleResultTbx.Text = "Not available";
+            }
+
+        }
         private void firstBtn_Click(object sender, EventArgs e)
         {
             if (moduleManager.Position != 0)
@@ -209,9 +270,9 @@ namespace studentProgressionTracker
 
         private void taskBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             moduleTaskInfoFrm ModuleTaskForm = new moduleTaskInfoFrm(username, moduleIDTbx.Text);
-            ModuleTaskForm.Closed += (s, args) => this.Close();
+            //ModuleTaskForm.Closed += (s, args) => this.Close();
             ModuleTaskForm.ShowDialog();
         }
 
@@ -231,6 +292,21 @@ namespace studentProgressionTracker
             {
                 MessageBox.Show(ex.Message, "Error adding new record", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void moduleStartTbx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resultsGbx_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 

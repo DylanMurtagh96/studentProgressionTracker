@@ -30,6 +30,7 @@ namespace studentProgressionTracker
         private void InitializeComponent()
         {
             this.assignmentsGbx = new System.Windows.Forms.GroupBox();
+            this.moduleNameLbl = new System.Windows.Forms.Label();
             this.moduleIDLbl = new System.Windows.Forms.Label();
             this.courseIDLbl = new System.Windows.Forms.Label();
             this.taskIDLbl = new System.Windows.Forms.Label();
@@ -43,16 +44,22 @@ namespace studentProgressionTracker
             this.taskNameLbl = new System.Windows.Forms.Label();
             this.taskNameTbx = new System.Windows.Forms.TextBox();
             this.taskValueTbx = new System.Windows.Forms.TextBox();
-            this.moduleNameLbl = new System.Windows.Forms.Label();
             this.taskOutlineLbl = new System.Windows.Forms.Label();
+            this.moduleNameTbx = new System.Windows.Forms.TextBox();
+            this.backBtn = new System.Windows.Forms.Button();
             this.assignmentsGbx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxHome)).BeginInit();
             this.SuspendLayout();
             // 
             // assignmentsGbx
             // 
+            this.assignmentsGbx.Controls.Add(this.moduleNameTbx);
             this.assignmentsGbx.Controls.Add(this.moduleNameLbl);
+            this.assignmentsGbx.Controls.Add(this.taskValueTbx);
+            this.assignmentsGbx.Controls.Add(this.taskNameTbx);
+            this.assignmentsGbx.Controls.Add(this.taskValueLbl);
             this.assignmentsGbx.Controls.Add(this.moduleIDLbl);
+            this.assignmentsGbx.Controls.Add(this.taskNameLbl);
             this.assignmentsGbx.Controls.Add(this.courseIDLbl);
             this.assignmentsGbx.Controls.Add(this.taskIDLbl);
             this.assignmentsGbx.Controls.Add(this.taskIDTbx);
@@ -62,14 +69,24 @@ namespace studentProgressionTracker
             this.assignmentsGbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.assignmentsGbx.Name = "assignmentsGbx";
             this.assignmentsGbx.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.assignmentsGbx.Size = new System.Drawing.Size(329, 190);
+            this.assignmentsGbx.Size = new System.Drawing.Size(657, 190);
             this.assignmentsGbx.TabIndex = 4;
             this.assignmentsGbx.TabStop = false;
+            // 
+            // moduleNameLbl
+            // 
+            this.moduleNameLbl.AutoSize = true;
+            this.moduleNameLbl.Location = new System.Drawing.Point(19, 17);
+            this.moduleNameLbl.Name = "moduleNameLbl";
+            this.moduleNameLbl.Size = new System.Drawing.Size(95, 17);
+            this.moduleNameLbl.TabIndex = 6;
+            this.moduleNameLbl.Text = "Module Name";
+            this.moduleNameLbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // moduleIDLbl
             // 
             this.moduleIDLbl.AutoSize = true;
-            this.moduleIDLbl.Location = new System.Drawing.Point(29, 119);
+            this.moduleIDLbl.Location = new System.Drawing.Point(43, 146);
             this.moduleIDLbl.Name = "moduleIDLbl";
             this.moduleIDLbl.Size = new System.Drawing.Size(71, 17);
             this.moduleIDLbl.TabIndex = 5;
@@ -78,7 +95,7 @@ namespace studentProgressionTracker
             // courseIDLbl
             // 
             this.courseIDLbl.AutoSize = true;
-            this.courseIDLbl.Location = new System.Drawing.Point(29, 79);
+            this.courseIDLbl.Location = new System.Drawing.Point(44, 110);
             this.courseIDLbl.Name = "courseIDLbl";
             this.courseIDLbl.Size = new System.Drawing.Size(70, 17);
             this.courseIDLbl.TabIndex = 4;
@@ -87,7 +104,7 @@ namespace studentProgressionTracker
             // taskIDLbl
             // 
             this.taskIDLbl.AutoSize = true;
-            this.taskIDLbl.Location = new System.Drawing.Point(29, 33);
+            this.taskIDLbl.Location = new System.Drawing.Point(58, 61);
             this.taskIDLbl.Name = "taskIDLbl";
             this.taskIDLbl.Size = new System.Drawing.Size(56, 17);
             this.taskIDLbl.TabIndex = 3;
@@ -95,7 +112,7 @@ namespace studentProgressionTracker
             // 
             // taskIDTbx
             // 
-            this.taskIDTbx.Location = new System.Drawing.Point(125, 32);
+            this.taskIDTbx.Location = new System.Drawing.Point(162, 61);
             this.taskIDTbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.taskIDTbx.Name = "taskIDTbx";
             this.taskIDTbx.Size = new System.Drawing.Size(176, 22);
@@ -103,7 +120,7 @@ namespace studentProgressionTracker
             // 
             // moduleIDTbx
             // 
-            this.moduleIDTbx.Location = new System.Drawing.Point(203, 114);
+            this.moduleIDTbx.Location = new System.Drawing.Point(162, 143);
             this.moduleIDTbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.moduleIDTbx.Name = "moduleIDTbx";
             this.moduleIDTbx.Size = new System.Drawing.Size(100, 22);
@@ -111,7 +128,7 @@ namespace studentProgressionTracker
             // 
             // courseIDTbx
             // 
-            this.courseIDTbx.Location = new System.Drawing.Point(203, 74);
+            this.courseIDTbx.Location = new System.Drawing.Point(162, 105);
             this.courseIDTbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.courseIDTbx.Name = "courseIDTbx";
             this.courseIDTbx.Size = new System.Drawing.Size(100, 22);
@@ -154,7 +171,7 @@ namespace studentProgressionTracker
             // taskValueLbl
             // 
             this.taskValueLbl.AutoSize = true;
-            this.taskValueLbl.Location = new System.Drawing.Point(471, 238);
+            this.taskValueLbl.Location = new System.Drawing.Point(376, 113);
             this.taskValueLbl.Name = "taskValueLbl";
             this.taskValueLbl.Size = new System.Drawing.Size(79, 17);
             this.taskValueLbl.TabIndex = 39;
@@ -163,7 +180,7 @@ namespace studentProgressionTracker
             // taskNameLbl
             // 
             this.taskNameLbl.AutoSize = true;
-            this.taskNameLbl.Location = new System.Drawing.Point(470, 196);
+            this.taskNameLbl.Location = new System.Drawing.Point(375, 66);
             this.taskNameLbl.Name = "taskNameLbl";
             this.taskNameLbl.Size = new System.Drawing.Size(80, 17);
             this.taskNameLbl.TabIndex = 38;
@@ -171,7 +188,7 @@ namespace studentProgressionTracker
             // 
             // taskNameTbx
             // 
-            this.taskNameTbx.Location = new System.Drawing.Point(565, 193);
+            this.taskNameTbx.Location = new System.Drawing.Point(467, 66);
             this.taskNameTbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.taskNameTbx.Name = "taskNameTbx";
             this.taskNameTbx.Size = new System.Drawing.Size(100, 22);
@@ -179,21 +196,11 @@ namespace studentProgressionTracker
             // 
             // taskValueTbx
             // 
-            this.taskValueTbx.Location = new System.Drawing.Point(565, 235);
+            this.taskValueTbx.Location = new System.Drawing.Point(467, 113);
             this.taskValueTbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.taskValueTbx.Name = "taskValueTbx";
             this.taskValueTbx.Size = new System.Drawing.Size(100, 22);
             this.taskValueTbx.TabIndex = 36;
-            // 
-            // moduleNameLbl
-            // 
-            this.moduleNameLbl.AutoSize = true;
-            this.moduleNameLbl.Location = new System.Drawing.Point(28, 160);
-            this.moduleNameLbl.Name = "moduleNameLbl";
-            this.moduleNameLbl.Size = new System.Drawing.Size(119, 21);
-            this.moduleNameLbl.TabIndex = 6;
-            this.moduleNameLbl.Text = "Module Name";
-            this.moduleNameLbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // taskOutlineLbl
             // 
@@ -204,16 +211,30 @@ namespace studentProgressionTracker
             this.taskOutlineLbl.TabIndex = 40;
             this.taskOutlineLbl.Text = "Task Outline";
             // 
+            // moduleNameTbx
+            // 
+            this.moduleNameTbx.Location = new System.Drawing.Point(159, 17);
+            this.moduleNameTbx.Name = "moduleNameTbx";
+            this.moduleNameTbx.Size = new System.Drawing.Size(425, 22);
+            this.moduleNameTbx.TabIndex = 40;
+            // 
+            // backBtn
+            // 
+            this.backBtn.Location = new System.Drawing.Point(583, 579);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(160, 37);
+            this.backBtn.TabIndex = 41;
+            this.backBtn.Text = "B&ack to Module Tasks info";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
             // taskInfoFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 597);
+            this.ClientSize = new System.Drawing.Size(800, 628);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.taskOutlineLbl);
-            this.Controls.Add(this.taskValueLbl);
-            this.Controls.Add(this.taskNameLbl);
-            this.Controls.Add(this.taskNameTbx);
-            this.Controls.Add(this.taskValueTbx);
             this.Controls.Add(this.picboxHome);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.taskOutlineTbx);
@@ -247,5 +268,7 @@ namespace studentProgressionTracker
         private System.Windows.Forms.TextBox taskNameTbx;
         private System.Windows.Forms.TextBox taskValueTbx;
         private System.Windows.Forms.Label taskOutlineLbl;
+        private System.Windows.Forms.TextBox moduleNameTbx;
+        private System.Windows.Forms.Button backBtn;
     }
 }
