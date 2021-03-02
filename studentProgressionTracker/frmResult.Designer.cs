@@ -95,6 +95,7 @@ namespace studentProgressionTracker
             this.txtModuleID.Location = new System.Drawing.Point(143, 123);
             this.txtModuleID.Multiline = true;
             this.txtModuleID.Name = "txtModuleID";
+            this.txtModuleID.ReadOnly = true;
             this.txtModuleID.Size = new System.Drawing.Size(217, 38);
             this.txtModuleID.TabIndex = 39;
             // 
@@ -152,7 +153,7 @@ namespace studentProgressionTracker
             this.Controls.Add(this.picboxHome);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "frmResult";
-            this.Text = "frmResult";
+            this.Text = "Results";
             this.Load += new System.EventHandler(this.frmResult_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picboxHome)).EndInit();
             this.ResumeLayout(false);

@@ -215,12 +215,22 @@ namespace studentProgressionTracker
             MergedForm.ShowDialog();
         }
 
-        private void resultBtn_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmResult resultForm = new frmResult(username);
-            resultForm.Closed += (s, args) => this.Close();
-            resultForm.ShowDialog();
+
+            try
+            {
+                moduleManager.AddNew();
+                MessageBox.Show("Populate the text boxes and Click the Save button when you have finished entering the data",
+                      "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //user will get new blank slot to populate and then can save new record by pressing save
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error adding new record", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 
