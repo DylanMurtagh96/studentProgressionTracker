@@ -22,7 +22,7 @@ namespace studentProgressionTracker
 
         bool dbError = false;
         String username;
-
+        String fullName;
         //OleDbConnection conn;
         OleDbCommand resultsCommand;
         OleDbDataAdapter resultsAdapter;
@@ -39,9 +39,10 @@ namespace studentProgressionTracker
 
         //bool dbError = false;
 
-        public moduleInformationFrm(String un)
+        public moduleInformationFrm(String un, String name)
         {
             username = un;
+            fullName = name;
             InitializeComponent();
         }
         ////This code is run each time the application is opened it connects to the database and
@@ -79,7 +80,7 @@ namespace studentProgressionTracker
 
             moduleManager = (CurrencyManager)BindingContext[moduleTable];
             
-            resultsGbx.Text = $"Results for {username} in the above module is";
+            resultsGbx.Text = $"Results for {fullName} in the above module is";
             String cmdTxt = $"Select * from {username}_Results";
             resultsAdapter = new OleDbDataAdapter();
             resultsCommand = new OleDbCommand(cmdTxt, conn);
@@ -106,7 +107,7 @@ namespace studentProgressionTracker
             DataRow[] matchingIds;
 
             matchingIds = resultsTable.Select(expression);
-            if (matchingIds[0][10] != null)
+            if ((matchingIds[0][10] != null) && (matchingIds[0][10].ToString()!= ""))
             {
                 moduleResultTbx.Text = matchingIds[0][10].ToString();
             }

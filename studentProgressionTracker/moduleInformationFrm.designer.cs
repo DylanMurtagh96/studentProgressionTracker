@@ -62,12 +62,12 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.picboxHome = new System.Windows.Forms.PictureBox();
             this.resultsGbx = new System.Windows.Forms.GroupBox();
-            this.moduleStartTbx = new System.Windows.Forms.TextBox();
-            this.moduleCompTbx = new System.Windows.Forms.TextBox();
-            this.moduleResultTbx = new System.Windows.Forms.TextBox();
-            this.modStrLbl = new System.Windows.Forms.Label();
-            this.mdouleCompLbl = new System.Windows.Forms.Label();
             this.moduleResultLbl = new System.Windows.Forms.Label();
+            this.mdouleCompLbl = new System.Windows.Forms.Label();
+            this.modStrLbl = new System.Windows.Forms.Label();
+            this.moduleResultTbx = new System.Windows.Forms.TextBox();
+            this.moduleCompTbx = new System.Windows.Forms.TextBox();
+            this.moduleStartTbx = new System.Windows.Forms.TextBox();
             this.scheduleItemsGbx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxHome)).BeginInit();
             this.resultsGbx.SuspendLayout();
@@ -366,9 +366,9 @@
             this.exitBtn.Location = new System.Drawing.Point(610, 480);
             this.exitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(108, 37);
+            this.exitBtn.Size = new System.Drawing.Size(108, 46);
             this.exitBtn.TabIndex = 29;
-            this.exitBtn.Text = "E&xit";
+            this.exitBtn.Text = "B&ack to main menu";
             this.exitBtn.UseVisualStyleBackColor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
@@ -411,29 +411,23 @@
             this.resultsGbx.TabStop = false;
             this.resultsGbx.Enter += new System.EventHandler(this.resultsGbx_Enter);
             // 
-            // moduleStartTbx
+            // moduleResultLbl
             // 
-            this.moduleStartTbx.Location = new System.Drawing.Point(200, 37);
-            this.moduleStartTbx.Name = "moduleStartTbx";
-            this.moduleStartTbx.Size = new System.Drawing.Size(119, 24);
-            this.moduleStartTbx.TabIndex = 0;
-            this.moduleStartTbx.Text = "Currently not available";
-            this.moduleStartTbx.TextChanged += new System.EventHandler(this.moduleStartTbx_TextChanged);
+            this.moduleResultLbl.AutoSize = true;
+            this.moduleResultLbl.Location = new System.Drawing.Point(15, 125);
+            this.moduleResultLbl.Name = "moduleResultLbl";
+            this.moduleResultLbl.Size = new System.Drawing.Size(106, 17);
+            this.moduleResultLbl.TabIndex = 5;
+            this.moduleResultLbl.Text = "Module Result";
             // 
-            // moduleCompTbx
+            // mdouleCompLbl
             // 
-            this.moduleCompTbx.Location = new System.Drawing.Point(200, 78);
-            this.moduleCompTbx.Name = "moduleCompTbx";
-            this.moduleCompTbx.Size = new System.Drawing.Size(116, 24);
-            this.moduleCompTbx.TabIndex = 1;
-            this.moduleCompTbx.Text = "Currently not available";
-            // 
-            // moduleResultTbx
-            // 
-            this.moduleResultTbx.Location = new System.Drawing.Point(201, 118);
-            this.moduleResultTbx.Name = "moduleResultTbx";
-            this.moduleResultTbx.Size = new System.Drawing.Size(115, 24);
-            this.moduleResultTbx.TabIndex = 2;
+            this.mdouleCompLbl.AutoSize = true;
+            this.mdouleCompLbl.Location = new System.Drawing.Point(11, 85);
+            this.mdouleCompLbl.Name = "mdouleCompLbl";
+            this.mdouleCompLbl.Size = new System.Drawing.Size(179, 17);
+            this.mdouleCompLbl.TabIndex = 4;
+            this.mdouleCompLbl.Text = "Module Completion Date";
             // 
             // modStrLbl
             // 
@@ -445,23 +439,29 @@
             this.modStrLbl.Text = "Module Start Date";
             this.modStrLbl.Click += new System.EventHandler(this.label1_Click);
             // 
-            // mdouleCompLbl
+            // moduleResultTbx
             // 
-            this.mdouleCompLbl.AutoSize = true;
-            this.mdouleCompLbl.Location = new System.Drawing.Point(11, 85);
-            this.mdouleCompLbl.Name = "mdouleCompLbl";
-            this.mdouleCompLbl.Size = new System.Drawing.Size(179, 17);
-            this.mdouleCompLbl.TabIndex = 4;
-            this.mdouleCompLbl.Text = "Module Completion Date";
+            this.moduleResultTbx.Location = new System.Drawing.Point(201, 118);
+            this.moduleResultTbx.Name = "moduleResultTbx";
+            this.moduleResultTbx.Size = new System.Drawing.Size(115, 24);
+            this.moduleResultTbx.TabIndex = 2;
             // 
-            // moduleResultLbl
+            // moduleCompTbx
             // 
-            this.moduleResultLbl.AutoSize = true;
-            this.moduleResultLbl.Location = new System.Drawing.Point(15, 125);
-            this.moduleResultLbl.Name = "moduleResultLbl";
-            this.moduleResultLbl.Size = new System.Drawing.Size(106, 17);
-            this.moduleResultLbl.TabIndex = 5;
-            this.moduleResultLbl.Text = "Module Result";
+            this.moduleCompTbx.Location = new System.Drawing.Point(200, 78);
+            this.moduleCompTbx.Name = "moduleCompTbx";
+            this.moduleCompTbx.Size = new System.Drawing.Size(116, 24);
+            this.moduleCompTbx.TabIndex = 1;
+            this.moduleCompTbx.Text = "Currently not available";
+            // 
+            // moduleStartTbx
+            // 
+            this.moduleStartTbx.Location = new System.Drawing.Point(200, 37);
+            this.moduleStartTbx.Name = "moduleStartTbx";
+            this.moduleStartTbx.Size = new System.Drawing.Size(119, 24);
+            this.moduleStartTbx.TabIndex = 0;
+            this.moduleStartTbx.Text = "Currently not available";
+            this.moduleStartTbx.TextChanged += new System.EventHandler(this.moduleStartTbx_TextChanged);
             // 
             // moduleInformationFrm
             // 
