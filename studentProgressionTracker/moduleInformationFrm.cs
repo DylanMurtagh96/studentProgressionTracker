@@ -210,7 +210,7 @@ namespace studentProgressionTracker
         private void taskBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            moduleTaskInfoFrm ModuleTaskForm = new moduleTaskInfoFrm(username);
+            moduleTaskInfoFrm ModuleTaskForm = new moduleTaskInfoFrm(username, moduleIDTbx.Text);
             ModuleTaskForm.Closed += (s, args) => this.Close();
             ModuleTaskForm.ShowDialog();
         }

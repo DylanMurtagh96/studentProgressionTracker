@@ -21,16 +21,17 @@ namespace studentProgressionTracker
         CurrencyManager taskManager;
         OleDbCommandBuilder taskCommBuilder;
         String username;
-
+        String modId;
         OleDbCommand searchCommand;
         OleDbDataAdapter searchAdapter;
         DataTable searchTable;
 
         bool dbError = false;
 
-        public moduleTaskInfoFrm(String un)
+        public moduleTaskInfoFrm(String un ,String moduleId)
         {
             username = un;
+            modId = moduleId;
             InitializeComponent();
         }
 
@@ -45,7 +46,7 @@ namespace studentProgressionTracker
             recordTrackerTbx.Text = conn.State.ToString();
 
             //create command object and pass SQL command and connection object 
-            String cmdTxt = "Select courseModules.moduleTitle, courseModules.moduleID, courseModules.moduleOutline from courseModules";
+            String cmdTxt = $"Select courseModules.moduleTitle, courseModules.moduleID, courseModules.moduleOutline from courseModules Where courseModules.moduleID = '{modId}'";
             taskAdapter = new OleDbDataAdapter();
             taskCommand = new OleDbCommand(cmdTxt, conn);
             DataSet taskDataSet = new DataSet();
@@ -68,8 +69,8 @@ namespace studentProgressionTracker
         private void updateDgv()
         {
             
-            String modID = moduleIDTbx.Text;
-            String cmdTxt1 = $"Select * from assignmentsTbl where moduleID = '{modID}'";
+            //String modID = moduleIDTbx.Text;
+            String cmdTxt1 = $"Select * from assignmentsTbl where moduleID = '{modId}'";
             searchCommand = new OleDbCommand(cmdTxt1, conn);
             searchAdapter = new OleDbDataAdapter();
             searchAdapter.SelectCommand = searchCommand;
