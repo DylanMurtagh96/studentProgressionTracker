@@ -146,6 +146,7 @@ namespace studentProgressionTracker
             this.buttonAllResults.TabIndex = 44;
             this.buttonAllResults.Text = "All Results";
             this.buttonAllResults.UseVisualStyleBackColor = true;
+            this.buttonAllResults.Click += new System.EventHandler(this.btnAllResults_Click);
             // 
             // frmResult
             // 

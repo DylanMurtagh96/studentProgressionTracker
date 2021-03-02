@@ -107,9 +107,9 @@ namespace studentProgressionTracker
         private void btnAllResults_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmResultsDGV allResultsForm = new frmResultsDGV(username);
-            allResultsForm.Closed += (s, args) => this.Close();
-            allResultsForm.ShowDialog();
+            frmResultsDGV menuForm = new frmResultsDGV(username);
+            menuForm.Closed += (s, args) => this.Close();
+            menuForm.ShowDialog();
         }
     }
 }
