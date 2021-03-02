@@ -217,10 +217,10 @@ namespace studentProgressionTracker
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            moduleTaskInfoFrm ModuleTaskForm = new moduleTaskInfoFrm(username);
-            ModuleTaskForm.Closed += (s, args) => this.Close();
-            ModuleTaskForm.ShowDialog();
+            //this.Hide();
+            //moduleTaskInfoFrm ModuleTaskForm = new moduleTaskInfoFrm(username);
+            //ModuleTaskForm.Closed += (s, args) => this.Close();
+            //ModuleTaskForm.ShowDialog();
         }
     }
 }
