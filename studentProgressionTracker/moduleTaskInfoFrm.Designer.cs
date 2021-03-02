@@ -1,7 +1,7 @@
 ﻿
 namespace studentProgressionTracker
 {
-    partial class mergedFrm
+    partial class moduleTaskInfoFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -44,6 +44,7 @@ namespace studentProgressionTracker
             this.moduleTasksDgv = new System.Windows.Forms.DataGridView();
             this.picboxHome = new System.Windows.Forms.PictureBox();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.moduleTasksDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxHome)).BeginInit();
             this.SuspendLayout();
@@ -192,11 +193,21 @@ namespace studentProgressionTracker
             this.lblWelcome.Text = "Module Task Information";
             this.lblWelcome.Click += new System.EventHandler(this.lblWelcome_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(126, 287);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(484, 17);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Double click on any row to see further information about the individual tasks";
+            // 
             // mergedFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1104, 599);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.picboxHome);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.moduleTasksDgv);
@@ -213,7 +224,7 @@ namespace studentProgressionTracker
             this.Controls.Add(this.moduleNameTbx);
             this.Controls.Add(this.moduleIDTbx);
             this.Name = "mergedFrm";
-            this.Text = "SQL Query Form";
+            this.Text = "Module Task Information";
             this.Load += new System.EventHandler(this.mergedFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.moduleTasksDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxHome)).EndInit();
@@ -239,5 +250,6 @@ namespace studentProgressionTracker
         private System.Windows.Forms.DataGridView moduleTasksDgv;
         private System.Windows.Forms.PictureBox picboxHome;
         private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label label1;
     }
 }

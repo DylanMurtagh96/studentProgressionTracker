@@ -207,12 +207,12 @@ namespace studentProgressionTracker
             menuForm.ShowDialog();
         }
 
-        private void searchBtn_Click(object sender, EventArgs e)
+        private void taskBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mergedFrm MergedForm = new mergedFrm(username);
-            MergedForm.Closed += (s, args) => this.Close();
-            MergedForm.ShowDialog();
+            moduleTaskInfoFrm ModuleTaskForm = new moduleTaskInfoFrm(username);
+            ModuleTaskForm.Closed += (s, args) => this.Close();
+            ModuleTaskForm.ShowDialog();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

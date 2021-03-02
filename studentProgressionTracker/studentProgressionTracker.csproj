@@ -88,11 +88,11 @@
     <Compile Include="frmStudentInfo.Designer.cs">
       <DependentUpon>frmStudentInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="mergedFrm.cs">
+    <Compile Include="moduleTaskInfoFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mergedFrm.Designer.cs">
-      <DependentUpon>mergedFrm.cs</DependentUpon>
+    <Compile Include="moduleTaskInfoFrm.Designer.cs">
+      <DependentUpon>moduleTaskInfoFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="moduleInformationFrm.cs">
       <SubType>Form</SubType>
@@ -100,6 +100,7 @@
     <Compile Include="moduleInformationFrm.designer.cs">
       <DependentUpon>moduleInformationFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="taskInfoFrm.cs">
@@ -129,8 +130,8 @@
     <EmbeddedResource Include="frmStudentInfo.resx">
       <DependentUpon>frmStudentInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mergedFrm.resx">
-      <DependentUpon>mergedFrm.cs</DependentUpon>
+    <EmbeddedResource Include="moduleTaskInfoFrm.resx">
+      <DependentUpon>moduleTaskInfoFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="moduleInformationFrm.resx">
       <DependentUpon>moduleInformationFrm.cs</DependentUpon>
@@ -148,6 +149,7 @@
     <EmbeddedResource Include="taskInfoFrm.resx">
       <DependentUpon>taskInfoFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\studentProgressionTracker.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -166,6 +168,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\killester.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\studentProgressionTracker.exe" />
+    <Content Include="bin\Debug\studentProgressionTracker.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

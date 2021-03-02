@@ -11,7 +11,7 @@ using System.Data.OleDb;
 
 namespace studentProgressionTracker
 {
-    public partial class mergedFrm : Form
+    public partial class moduleTaskInfoFrm : Form
     {
         OleDbConnection conn;
         OleDbCommand taskCommand;
@@ -28,7 +28,7 @@ namespace studentProgressionTracker
 
         bool dbError = false;
 
-        public mergedFrm(String un)
+        public moduleTaskInfoFrm(String un)
         {
             username = un;
             InitializeComponent();
@@ -91,11 +91,15 @@ namespace studentProgressionTracker
                 taskAdapter.Dispose();
                 //taskDataSet.Dispose();
             }
-            this.Close();
+            //this.Close();
             this.Hide();
-            moduleInformationFrm menuForm = new moduleInformationFrm(username);
-            menuForm.Closed += (s, args) => this.Close();
-            menuForm.ShowDialog();
+            moduleInformationFrm moduleForm = new moduleInformationFrm(username);
+            moduleForm.Closed += (s, args) => this.Close();
+            moduleForm.ShowDialog();
+            //this.Hide();
+            //frmMenu menuForm = new frmMenu(username);
+            //menuForm.Closed += (s, args) => this.Close();
+            //menuForm.ShowDialog();
         }
 
         private void firstBtn_Click(object sender, EventArgs e)
