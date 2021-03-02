@@ -18,6 +18,7 @@ namespace studentProgressionTracker
         OleDbDataAdapter studentAdapter;
         DataTable studentTable;
         String username;
+        String name;
 
         public frmMenu(String un)
         {
@@ -46,7 +47,7 @@ namespace studentProgressionTracker
 
             //dataBinding
             txtName.DataBindings.Add("Text", studentTable, "studentName");
-            String name = txtName.Text;
+            name = txtName.Text;
             var names = name.Split(' ');
             lblWelcome.Text = ("Welcome, "  + names[0]);
         }
