@@ -37,6 +37,7 @@ namespace studentProgressionTracker
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.courseInfoBtn = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.btnResults = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@ namespace studentProgressionTracker
             this.lblWelcome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblWelcome.Location = new System.Drawing.Point(153, 44);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(0, 32);
+            this.lblWelcome.Size = new System.Drawing.Size(0, 25);
             this.lblWelcome.TabIndex = 0;
             // 
             // moduleBtn
@@ -91,7 +92,7 @@ namespace studentProgressionTracker
             // 
             this.btnLogout.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogout.Location = new System.Drawing.Point(91, 309);
+            this.btnLogout.Location = new System.Drawing.Point(91, 359);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(234, 43);
             this.btnLogout.TabIndex = 7;
@@ -125,14 +126,27 @@ namespace studentProgressionTracker
             // 
             this.txtName.Location = new System.Drawing.Point(12, 48);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 24);
+            this.txtName.Size = new System.Drawing.Size(100, 21);
             this.txtName.TabIndex = 10;
+            // 
+            // btnResults
+            // 
+            this.btnResults.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResults.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnResults.Location = new System.Drawing.Point(91, 310);
+            this.btnResults.Name = "btnResults";
+            this.btnResults.Size = new System.Drawing.Size(234, 43);
+            this.btnResults.TabIndex = 11;
+            this.btnResults.Text = "Add Results";
+            this.btnResults.UseVisualStyleBackColor = true;
+            this.btnResults.Click += new System.EventHandler(this.btnResults_Click);
             // 
             // frmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 386);
+            this.ClientSize = new System.Drawing.Size(411, 427);
+            this.Controls.Add(this.btnResults);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.courseInfoBtn);
@@ -161,5 +175,6 @@ namespace studentProgressionTracker
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button courseInfoBtn;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button btnResults;
     }
 }
