@@ -30,12 +30,14 @@ namespace studentProgressionTracker
         private void InitializeComponent()
         {
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.btnModule = new System.Windows.Forms.Button();
+            this.moduleBtn = new System.Windows.Forms.Button();
             this.btnStudent = new System.Windows.Forms.Button();
             this.btnAssingment = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.courseInfoBtn = new System.Windows.Forms.Button();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.btnResults = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,21 +49,20 @@ namespace studentProgressionTracker
             this.lblWelcome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblWelcome.Location = new System.Drawing.Point(153, 44);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(210, 25);
+            this.lblWelcome.Size = new System.Drawing.Size(0, 25);
             this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome, Shauna ";
             // 
-            // btnModule
+            // moduleBtn
             // 
-            this.btnModule.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModule.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnModule.Location = new System.Drawing.Point(91, 119);
-            this.btnModule.Name = "btnModule";
-            this.btnModule.Size = new System.Drawing.Size(234, 43);
-            this.btnModule.TabIndex = 4;
-            this.btnModule.Text = "Module Information";
-            this.btnModule.UseVisualStyleBackColor = true;
-            this.btnModule.Click += new System.EventHandler(this.btnCourse_Click);
+            this.moduleBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moduleBtn.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.moduleBtn.Location = new System.Drawing.Point(91, 119);
+            this.moduleBtn.Name = "moduleBtn";
+            this.moduleBtn.Size = new System.Drawing.Size(234, 43);
+            this.moduleBtn.TabIndex = 4;
+            this.moduleBtn.Text = "Module Information";
+            this.moduleBtn.UseVisualStyleBackColor = true;
+            this.moduleBtn.Click += new System.EventHandler(this.moduleBtn_Click);
             // 
             // btnStudent
             // 
@@ -73,6 +74,7 @@ namespace studentProgressionTracker
             this.btnStudent.TabIndex = 5;
             this.btnStudent.Text = "Student Information";
             this.btnStudent.UseVisualStyleBackColor = true;
+            this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
             // 
             // btnAssingment
             // 
@@ -82,14 +84,15 @@ namespace studentProgressionTracker
             this.btnAssingment.Name = "btnAssingment";
             this.btnAssingment.Size = new System.Drawing.Size(234, 43);
             this.btnAssingment.TabIndex = 6;
-            this.btnAssingment.Text = "Assignment Records";
+            this.btnAssingment.Text = "Task Records";
             this.btnAssingment.UseVisualStyleBackColor = true;
+            this.btnAssingment.Click += new System.EventHandler(this.taskBtn_Click);
             // 
             // btnLogout
             // 
             this.btnLogout.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogout.Location = new System.Drawing.Point(91, 309);
+            this.btnLogout.Location = new System.Drawing.Point(91, 359);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(234, 43);
             this.btnLogout.TabIndex = 7;
@@ -107,29 +110,50 @@ namespace studentProgressionTracker
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // courseInfoBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Location = new System.Drawing.Point(91, 166);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(234, 43);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Course Information";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.courseInfoBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.courseInfoBtn.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.courseInfoBtn.Location = new System.Drawing.Point(91, 166);
+            this.courseInfoBtn.Name = "courseInfoBtn";
+            this.courseInfoBtn.Size = new System.Drawing.Size(234, 43);
+            this.courseInfoBtn.TabIndex = 9;
+            this.courseInfoBtn.Text = "Course Information";
+            this.courseInfoBtn.UseVisualStyleBackColor = true;
+            this.courseInfoBtn.Click += new System.EventHandler(this.courseInfoBtn_Click);
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(12, 48);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 21);
+            this.txtName.TabIndex = 10;
+            // 
+            // btnResults
+            // 
+            this.btnResults.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResults.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnResults.Location = new System.Drawing.Point(91, 310);
+            this.btnResults.Name = "btnResults";
+            this.btnResults.Size = new System.Drawing.Size(234, 43);
+            this.btnResults.TabIndex = 11;
+            this.btnResults.Text = "Add Results";
+            this.btnResults.UseVisualStyleBackColor = true;
+            this.btnResults.Click += new System.EventHandler(this.btnResults_Click);
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 386);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(411, 427);
+            this.Controls.Add(this.btnResults);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.courseInfoBtn);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnAssingment);
             this.Controls.Add(this.btnStudent);
-            this.Controls.Add(this.btnModule);
+            this.Controls.Add(this.moduleBtn);
             this.Controls.Add(this.lblWelcome);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmMenu";
@@ -144,11 +168,13 @@ namespace studentProgressionTracker
         #endregion
 
         private System.Windows.Forms.Label lblWelcome;
-        private System.Windows.Forms.Button btnModule;
+        private System.Windows.Forms.Button moduleBtn;
         private System.Windows.Forms.Button btnStudent;
         private System.Windows.Forms.Button btnAssingment;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button courseInfoBtn;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button btnResults;
     }
 }

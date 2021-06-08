@@ -21,9 +21,28 @@ namespace studentProgressionTracker
         OleDbCommandBuilder moduleCommBuilder;
 
         bool dbError = false;
+        String username;
+        String fullName;
+        //OleDbConnection conn;
+        OleDbCommand resultsCommand;
+        OleDbDataAdapter resultsAdapter;
+        //DataSet resultsDataSet;
+        DataSet resultsDataSet = new DataSet();
+        //DataTable taskTable;
+        //CurrencyManager taskManager;
+        //OleDbCommandBuilder taskCommBuilder;
+        //String username;
+        //String modId;
+        //OleDbCommand searchCommand;
+        //OleDbDataAdapter searchAdapter;
+        //DataTable searchTable;
 
-        public moduleInformationFrm()
+        //bool dbError = false;
+
+        public moduleInformationFrm(String un, String name)
         {
+            username = un;
+            fullName = name;
             InitializeComponent();
         }
         ////This code is run each time the application is opened it connects to the database and
@@ -31,7 +50,7 @@ namespace studentProgressionTracker
         private void moduleInformationFrm_Load(object sender, EventArgs e)
         {
             var connString = @"Provider = Microsoft.ACE.OLEDB.12.0;" +
-                            @"Data Source = C:\Users\kinca\OneDrive\Software Dev. Course\Team Project\courseModuleDB.accdb;";
+                            @"Data Source = ..\..\..\courseModuleDB.accdb;";
             //+ @" Jet OLEDB:Database Password = killester";
 
             conn = new OleDbConnection(connString);
@@ -59,11 +78,15 @@ namespace studentProgressionTracker
             semesterTbx.DataBindings.Add("Text", moduleTable, "semester");
             moduleOutlineTbx.DataBindings.Add("Text", moduleTable, "moduleOutline");
 
-            //dateRegisteredTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "DateRegistered", true, DataSourceUpdateMode.OnPropertyChanged, null, "dd/MM/yyyy"));
-            //rentalPerDayTbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", carTable, "RentalPerDay", true, DataSourceUpdateMode.OnPropertyChanged, null, "c2"));
-            //availableCbx.DataBindings.Add("CheckState", carTable, "Available", true, DataSourceUpdateMode.OnPropertyChanged, CheckState.Unchecked);
-
             moduleManager = (CurrencyManager)BindingContext[moduleTable];
+            
+            resultsGbx.Text = $"Results for {fullName} in the above module is";
+            String cmdTxt = $"Select * from {username}_Results";
+            resultsAdapter = new OleDbDataAdapter();
+            resultsCommand = new OleDbCommand(cmdTxt, conn);
+            
+            resultsAdapter.SelectCommand = resultsCommand;
+            resultsAdapter.Fill(resultsDataSet, "results");
             recordCount();
         }
 
@@ -71,8 +94,29 @@ namespace studentProgressionTracker
         private void recordCount()
         {
             recordTrackerTbx.Text = (moduleManager.Position + 1) + " of " + moduleManager.Count;
+            String moduleID = moduleIDTbx.Text;
+            getResult(moduleID);
+            
         }
 
+        private void getResult(String modId)
+        {
+            DataTable resultsTable = resultsDataSet.Tables[0];
+            String expression;
+            expression = $"ModuleID = '{modId}'";
+            DataRow[] matchingIds;
+
+            matchingIds = resultsTable.Select(expression);
+            if ((matchingIds[0][10] != null) && (matchingIds[0][10].ToString()!= ""))
+            {
+                moduleResultTbx.Text = matchingIds[0][10].ToString();
+            }
+            else
+            {
+                moduleResultTbx.Text = "Not available";
+            }
+
+        }
         private void firstBtn_Click(object sender, EventArgs e)
         {
             if (moduleManager.Position != 0)
@@ -145,23 +189,6 @@ namespace studentProgressionTracker
             }
         }
 
-        private void addBtn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                moduleManager.AddNew();
-                MessageBox.Show("Populate the text boxes and Click the Save button when you have finished entering the data",
-                      "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                //user will get new blank slot to populate and then can save new record by pressing save
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error adding new record", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             DialogResult response;
@@ -203,7 +230,65 @@ namespace studentProgressionTracker
                 moduleAdapter.Dispose();
                 moduleTable.Dispose();
             }
-            Close();
+            this.Close();
+            this.Hide();
+            frmMenu menuForm = new frmMenu(username);
+            menuForm.Closed += (s, args) => this.Close();
+            menuForm.ShowDialog();
+        }
+
+        private void courseTitleLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picboxHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMenu menuForm = new frmMenu(username);
+            menuForm.Closed += (s, args) => this.Close();
+            menuForm.ShowDialog();
+        }
+
+        private void taskBtn_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            moduleTaskInfoFrm ModuleTaskForm = new moduleTaskInfoFrm(username, moduleIDTbx.Text);
+            //ModuleTaskForm.Closed += (s, args) => this.Close();
+            ModuleTaskForm.ShowDialog();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                moduleManager.AddNew();
+                MessageBox.Show("Populate the text boxes and Click the Save button when you have finished entering the data",
+                      "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //user will get new blank slot to populate and then can save new record by pressing save
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error adding new record", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void moduleStartTbx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resultsGbx_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 

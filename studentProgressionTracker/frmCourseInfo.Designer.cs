@@ -29,17 +29,19 @@ namespace studentProgressionTracker
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picboxHome = new System.Windows.Forms.PictureBox();
             this.txtCourseName = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtTutor = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblWelcome = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.picboxHome)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -82,20 +84,24 @@ namespace studentProgressionTracker
             this.label4.TabIndex = 3;
             this.label4.Text = "Address";
             // 
-            // pictureBox1
+            // picboxHome
             // 
-            this.pictureBox1.BackgroundImage = global::studentProgressionTracker.Properties.Resources.killester;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 90);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.picboxHome.BackgroundImage = global::studentProgressionTracker.Properties.Resources.killester;
+            this.picboxHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picboxHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picboxHome.Location = new System.Drawing.Point(15, 12);
+            this.picboxHome.Name = "picboxHome";
+            this.picboxHome.Size = new System.Drawing.Size(114, 90);
+            this.picboxHome.TabIndex = 9;
+            this.picboxHome.TabStop = false;
+            this.toolTip1.SetToolTip(this.picboxHome, "Go To Home Menu");
+            this.picboxHome.Click += new System.EventHandler(this.picboxHome_Click);
             // 
             // txtCourseName
             // 
             this.txtCourseName.Location = new System.Drawing.Point(152, 128);
             this.txtCourseName.Name = "txtCourseName";
+            this.txtCourseName.ReadOnly = true;
             this.txtCourseName.Size = new System.Drawing.Size(183, 21);
             this.txtCourseName.TabIndex = 10;
             // 
@@ -103,6 +109,7 @@ namespace studentProgressionTracker
             // 
             this.txtID.Location = new System.Drawing.Point(152, 164);
             this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(100, 21);
             this.txtID.TabIndex = 11;
             // 
@@ -110,6 +117,7 @@ namespace studentProgressionTracker
             // 
             this.txtTutor.Location = new System.Drawing.Point(152, 200);
             this.txtTutor.Name = "txtTutor";
+            this.txtTutor.ReadOnly = true;
             this.txtTutor.Size = new System.Drawing.Size(183, 21);
             this.txtTutor.TabIndex = 12;
             // 
@@ -118,6 +126,7 @@ namespace studentProgressionTracker
             this.txtAddress.Location = new System.Drawing.Point(152, 235);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
+            this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(183, 71);
             this.txtAddress.TabIndex = 13;
             // 
@@ -143,7 +152,7 @@ namespace studentProgressionTracker
             this.Controls.Add(this.txtTutor);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtCourseName);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picboxHome);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -152,9 +161,9 @@ namespace studentProgressionTracker
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCourseInfo";
-            this.Text = "frmCourseInfo";
+            this.Text = "Course Information";
             this.Load += new System.EventHandler(this.frmCourseInfo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxHome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,11 +175,12 @@ namespace studentProgressionTracker
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picboxHome;
         private System.Windows.Forms.TextBox txtCourseName;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtTutor;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
